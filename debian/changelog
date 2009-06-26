@@ -1,3 +1,9 @@
+nc10-scripts (1.0~ppa3~nc10~jaunty) jaunty; urgency=low
+
+  * nc10: sleep for 5 seconds after notification update. 
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 27 Jun 2009 00:31:30 +0200
+
 nc10-scripts (1.0~ppa2~nc10~jaunty) jaunty; urgency=low
 
   * Fix minor issues with notification system. 

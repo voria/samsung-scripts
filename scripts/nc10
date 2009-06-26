@@ -92,11 +92,9 @@ showPopup ()
 		echo "$1" > $NH_ICON; echo "$2" > $NH_URGENCY; echo "$3" > $NH_TITLE; echo "$4" > $NH_MESSAGE
 		chown $SUDO_USER $NH_ICON $NH_URGENCY $NH_TITLE $NH_MESSAGE
 		if [ -f $NH_PID ]; then
-			# Update current notification bubble
+			# Update current notification bubble and sleep while it's showed
 			kill -12 `cat $NH_PID`
-			while [ -f $NH_PID ]; do
-				sleep 0.1
-			done
+			sleep 5
 		else
 			# Create a new notification bubble
 			sudo -u $SUDO_USER -- $SCRIPTS_DIR/notify_helper.py $NH_PID $NH_ICON $NH_URGENCY $NH_TITLE $NH_MESSAGE

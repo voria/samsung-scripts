@@ -1,0 +1,132 @@
+#!/bin/bash
+#
+# wrapper script for voria's excellent NC10 scripts
+# see http://www.voria.org/forum/ for details
+#
+# Author: Stuart Herbert (stuart@stuartherbert.com)
+# Released into the public domain
+
+SCRIPTS_DIR="/usr/lib/nc10"
+
+# notify_helper.py temp files
+NH_PID="/tmp/notify_helper-pid"
+NH_ICON="/tmp/notify_helper-icon"
+NH_URGENCY="/tmp/notify_helper-urgency"
+NH_TITLE="/tmp/notify_helper-title"
+NH_MESSAGE="/tmp/notify_helper-message"
+
+determineLocale ()
+{
+	export LOCALE="$LANG"
+}
+
+determinePopup ()
+{
+	if [ -t 0 ]; then
+		export USE_POPUP=0
+	else
+		export USE_POPUP=1
+	fi
+}
+
+determineSudoUser ()
+{
+	# If $SUDO_USER is not specified, defaults to current user.
+	if [ -z $SUDO_USER ]; then
+       		export SUDO_USER=$USER
+	fi
+}
+
+mustBeRoot ()
+{
+	if [[ `id -u` != 0 ]] ; then
+		showPopup stop critical "Access Denied" "You must be root to perform this operation"
+		exit 1
+	fi
+}
+
+listOptions ()
+{
+	echo "nc10 - Utilities for your Samsung NC10 netbook"
+	echo 
+	
+	# list all of the available scripts, and their help messages
+
+	for x in `echo $SCRIPTS_DIR/*.sh` ; do
+		echo -n "nc10 `basename $x .sh` "
+		runScript `basename $x .sh` summary
+	done
+}
+
+runScript ()
+{
+	if [[ ! -x ${SCRIPTS_DIR}/$1.sh ]]; then
+		echo "Error: operation $1 not supported"
+		exit 1
+	fi
+
+	scriptToRun=$1
+	shift
+
+	. ${SCRIPTS_DIR}/${scriptToRun}.sh "$@"
+}
+
+showHelp ()
+{
+	echo -n "$0 $1 "
+	# the showSummary function is provided by the script we are running
+	showSummary
+}
+
+# showPopup()
+#
+# $1 - icon to show
+# $2 - severity
+# $3 - title
+# $4 - message
+
+showPopup ()
+{
+	if [ $USE_POPUP = 1 ]; then
+		# Create temp files holding informations we need for the notification bubble, owned by $SUDO_USER.
+		echo "$1" > $NH_ICON; echo "$2" > $NH_URGENCY; echo "$3" > $NH_TITLE; echo "$4" > $NH_MESSAGE
+		chown $SUDO_USER $NH_ICON $NH_URGENCY $NH_TITLE $NH_MESSAGE
+		if [ -f $NH_PID ]; then
+			# Update current notification bubble
+			kill -12 `cat $NH_PID`
+			while [ -f $NH_PID ]; do
+				sleep 0.1
+			done
+		else
+			# Create a new notification bubble
+			sudo -u $SUDO_USER -- $SCRIPTS_DIR/notify_helper.py $NH_PID $NH_ICON $NH_URGENCY $NH_TITLE $NH_MESSAGE
+		fi
+	else
+		echo "$3 - $4"
+	fi
+}
+
+main ()
+{
+	# figure out our environment
+	# this is also used by the scripts in $SCRIPT_DIR
+
+	determineLocale
+	determinePopup
+	determineSudoUser
+
+	# has the user asked us what they want to do?
+	if [[ -z $1 ]] ; then
+		# no, so tell them what the options are
+		listOptions
+		exit 0
+	fi
+
+	# if we get here, we have a command to run
+	scriptToRun="$1"
+	shift
+
+	runScript $scriptToRun "$@"
+}
+
+main "$@"

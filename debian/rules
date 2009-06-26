@@ -1,0 +1,43 @@
+#!/usr/bin/make -f
+
+install_dir=install -d -m 755
+install_file=install -m 644
+install_script=install -m 755
+
+build:
+
+clean:
+	$(checkdir)
+	-rm -f *~ */*~ debian/files* debian/*substvars
+	-rm -rf debian/tmp
+
+binary-indep: checkroot
+	$(checkdir)
+	-rm -rf debian/tmp
+	$(install_dir) debian/tmp/DEBIAN/
+	$(install_script) debian/postinst debian/tmp/DEBIAN/
+	$(install_script) debian/postrm debian/tmp/DEBIAN/
+	
+	$(install_dir) debian/tmp/usr/bin/
+	$(install_script) scripts/nc10 debian/tmp/usr/bin/
+	$(install_dir) debian/tmp/usr/lib/nc10/
+	$(install_script) scripts/*.sh debian/tmp/usr/lib/nc10/
+	$(install_script) scripts/*.py debian/tmp/usr/lib/nc10/
+	
+	$(install_dir) debian/tmp/usr/share/gconf/defaults/
+	$(install_file) 10_nc10-scripts debian/tmp/usr/share/gconf/defaults/
+	
+	$(install_dir) debian/tmp/usr/share/doc/nc10-scripts/
+	$(install_file) debian/changelog debian/tmp/usr/share/doc/nc10-scripts/
+	$(install_file) debian/copyright debian/tmp/usr/share/doc/nc10-scripts/
+	
+	dpkg-gencontrol -pnc10-scripts -isp
+	chown -R root.root debian/tmp
+	chmod -R go=rX debian/tmp
+	dpkg --build debian/tmp ..
+
+binary:		binary-indep
+
+binary-arch: binary
+
+.PHONY: binary-arch binary binary-indep clean checkroot

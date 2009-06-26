@@ -1,0 +1,23 @@
+Source: nc10-scripts
+Section: misc
+Priority: extra
+Maintainer: Fortunato Ventre (voRia) <vorione@gmail.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.0
+Homepage: http://www.voria.org/forum
+
+Package: nc10-scripts
+Architecture: all
+Depends: xbacklight
+Description: Scripts for Samsung NC10
+ This package contains useful scripts for Samsung NC10.
+ .
+ These are the default keybindings:
+ - FN-F5 --> Turn on/off the screen brightness.
+ - FN-F8 --> Show CPU temperature and manage CPU governors.
+ - FN-F9 --> Turn on/off the wireless card.
+ - <Shift><Ctrl><Alt>b --> Turn on/off the bluetooth.
+ - <Shift><Ctrl><Alt>w --> Turn on/off the webcam.
+ .
+ NOTE: You have to enable the 'commands' plugin in advanced
+ compiz configuration in order to use keybindings.

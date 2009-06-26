@@ -1,0 +1,21 @@
+#!/bin/sh
+
+case "$1" in
+	configure)
+		# Remove old rules from sudoers file
+		sed "/NC10/d" /etc/sudoers > /etc/sudoers.new
+		rm -f /etc/sudoers
+		mv /etc/sudoers.new /etc/sudoers
+		# Make sure that permissions and owner/group for sudoers file are good
+		chown root:root /etc/sudoers
+		chmod 440 /etc/sudoers
+
+		# Add new rules for the scripts that need them.
+		echo "## Rule for NC10 scripts" >> /etc/sudoers
+		echo "Cmnd_Alias	NC10_SCRIPT=/usr/bin/nc10" >> /etc/sudoers
+		echo "%admin ALL=(ALL) NOPASSWD: NC10_SCRIPT" >> /etc/sudoers
+		
+		# Update gconf default keybindings
+		update-gconf-defaults
+		;;
+esac

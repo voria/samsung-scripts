@@ -1,0 +1,10 @@
+/apps/metacity/keybinding_commands/command_1	nc10 lcd
+/apps/metacity/keybinding_commands/command_2	sudo nc10 cpuperf auto
+/apps/metacity/keybinding_commands/command_3	sudo nc10 wifi
+/apps/metacity/keybinding_commands/command_4	sudo nc10 bluetooth
+/apps/metacity/keybinding_commands/command_5	sudo nc10 webcam
+/apps/metacity/global_keybindings/run_command_1	XF86Launch1
+/apps/metacity/global_keybindings/run_command_2 XF86Launch3
+/apps/metacity/global_keybindings/run_command_3	XF86WLAN
+/apps/metacity/global_keybindings/run_command_4 <Shift><Control><Alt>b
+/apps/metacity/global_keybindings/run_command_5 <Shift><Control><Alt>w

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case "$1" in
+	remove|purge)
+		# Remove the existing rules from sudoers file.
+		sed "/NC10/d" /etc/sudoers > /etc/sudoers.new
+		rm -f /etc/sudoers
+		mv /etc/sudoers.new /etc/sudoers
+		# Make sure that permissions and owner/group for sudoers file are good
+		chown root:root /etc/sudoers
+		chmod 440 /etc/sudoers
+		
+		# Update gconf default keybindings
+		update-gconf-defaults
+		;;
+esac

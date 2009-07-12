@@ -1,3 +1,10 @@
+nc10-scripts (1.0~ppa4~nc10~jaunty) jaunty; urgency=low
+
+  * Correctly use newlines in cpuperf output. 
+  * debian/rules: remove .bzr/ directory when cleaning. 
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 13 Jul 2009 00:17:48 +0200
+
 nc10-scripts (1.0~ppa3~nc10~jaunty) jaunty; urgency=low
 
   * nc10: sleep for 5 seconds after notification update. 

@@ -153,7 +153,11 @@ showStatus ()
 	icon=`currentGovernorIcon`
 	temp=`currentTemperature`
 
-	showPopup "$icon" critical "$popup_title" "$cpu_temp $temp $cpu_freq $freq $cpu_governor $transGov"
+	message="$cpu_temp $temp
+$cpu_freq $freq
+$cpu_governor $transGov"
+
+	showPopup "$icon" critical "$popup_title" "$message"
 }
 
 showSummary ()

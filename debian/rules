@@ -10,7 +10,8 @@ clean:
 	$(checkdir)
 	-rm -f *~ */*~ debian/files* debian/*substvars
 	-rm -rf debian/tmp
-	rm -rf .bzr/
+	rm -rf .bzr*
+	rm -rf .project
 
 binary-indep: checkroot
 	$(checkdir)

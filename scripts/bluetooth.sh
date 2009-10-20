@@ -42,20 +42,18 @@ ICON=bluetooth
 disableBluetooth ()
 {
 	mustBeRoot
-	/etc/init.d/bluetooth stop > /dev/null
-	modprobe -r btusb
+	hciconfig hci0 down
 }
 
 enableBluetooth ()
 {
 	mustBeRoot
-	modprobe btusb
-	/etc/init.d/bluetooth start > /dev/null
+	hciconfig hci0 up
 }
 
 isBluetoothEnabled ()
 {
-	if /etc/init.d/bluetooth status | grep not > /dev/null ; then
+	if hciconfig hci0 | grep DOWN > /dev/null ; then
 		return 1
 	else
 		return 0

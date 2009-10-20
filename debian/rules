@@ -12,6 +12,7 @@ clean:
 	-rm -rf debian/tmp
 	rm -rf .bzr*
 	rm -rf .project
+	rm -rf .pydevproject
 
 binary-indep: checkroot
 	$(checkdir)
@@ -29,6 +30,9 @@ binary-indep: checkroot
 	$(install_dir) debian/tmp/usr/share/gconf/defaults/
 	$(install_file) 10_nc10-scripts debian/tmp/usr/share/gconf/defaults/
 	
+	$(install_dir) debian/tmp/usr/share/kde4/apps/khotkeys/
+	$(install_file) nc10-scripts.khotkeys debian/tmp/usr/share/kde4/apps/khotkeys/
+
 	$(install_dir) debian/tmp/usr/share/doc/nc10-scripts/
 	$(install_file) debian/changelog debian/tmp/usr/share/doc/nc10-scripts/
 	$(install_file) debian/copyright debian/tmp/usr/share/doc/nc10-scripts/

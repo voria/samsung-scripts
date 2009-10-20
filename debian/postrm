@@ -9,8 +9,10 @@ case "$1" in
 		# Make sure that permissions and owner/group for sudoers file are good
 		chown root:root /etc/sudoers
 		chmod 440 /etc/sudoers
-		
+
 		# Update gconf default keybindings
-		update-gconf-defaults
+		if [ -x /usr/sbin/update-gconf-defaults ]; then
+			update-gconf-defaults
+		fi
 		;;
 esac

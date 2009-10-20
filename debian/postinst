@@ -14,8 +14,10 @@ case "$1" in
 		echo "## Rule for NC10 scripts" >> /etc/sudoers
 		echo "Cmnd_Alias	NC10_SCRIPT=/usr/bin/nc10" >> /etc/sudoers
 		echo "%admin ALL=(ALL) NOPASSWD: NC10_SCRIPT" >> /etc/sudoers
-		
+
 		# Update gconf default keybindings
-		update-gconf-defaults
+		if [ -x /usr/sbin/update-gconf-defaults ]; then
+			update-gconf-defaults
+		fi
 		;;
 esac

@@ -1,3 +1,30 @@
+nc10-scripts (3.0~ppa1~nc10~karmic) karmic; urgency=low
+
+  * Add support for Kubuntu.
+    Kdialog is used for information popups. 
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 20 Oct 2009 17:52:48 +0200
+
+nc10-scripts (2.0~ppa3~nc10~karmic) karmic; urgency=low
+
+  * debian/postinst, debian/postrm:
+    - check if 'update-gconf-defaults' exists prior to use it.  
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 19 Oct 2009 16:55:13 +0200
+
+nc10-scripts (2.0~ppa2~nc10~karmic) karmic; urgency=low
+
+  * Fix bluetooth toggle. 
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Thu, 17 Sep 2009 17:07:46 +0200
+
+nc10-scripts (2.0~ppa1~nc10~karmic) karmic; urgency=low
+
+  * First release for Karmic.
+  * Drop xbacklight, as it does not work anymore.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 09 Sep 2009 12:52:23 +0000
+
 nc10-scripts (1.0~ppa4~nc10~jaunty) jaunty; urgency=low
 
   * Correctly use newlines in cpuperf output. 

@@ -1,4 +1,4 @@
-/apps/metacity/keybinding_commands/command_1	nc10 lcd
+/apps/metacity/keybinding_commands/command_1	sudo nc10 lcd
 /apps/metacity/keybinding_commands/command_2	sudo nc10 cpuperf auto
 /apps/metacity/keybinding_commands/command_3	sudo nc10 wifi
 /apps/metacity/keybinding_commands/command_4	sudo nc10 bluetooth

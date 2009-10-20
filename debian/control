@@ -8,7 +8,6 @@ Homepage: http://www.voria.org/forum
 
 Package: nc10-scripts
 Architecture: all
-Depends: xbacklight
 Description: Scripts for Samsung NC10
  This package contains useful scripts for Samsung NC10.
  .
@@ -19,5 +18,5 @@ Description: Scripts for Samsung NC10
  - <Shift><Ctrl><Alt>b --> Turn on/off the bluetooth.
  - <Shift><Ctrl><Alt>w --> Turn on/off the webcam.
  .
- NOTE: You have to enable the 'commands' plugin in advanced
- compiz configuration in order to use keybindings.
+ NOTE: On Ubuntu, you have to enable the 'commands' plugin in
+ advanced compiz configuration in order to use keybindings.

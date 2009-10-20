@@ -22,7 +22,7 @@ if len(sys.argv) != 6:
 open(sys.argv[1], "w").write(str(os.getpid()))
 
 def notifyUpdate(signum = None, frame = None):
-	# Read needed info from temp files and remove them
+	# Read needed info from temp files
 	icon = open(sys.argv[2], "r").read().strip()
 	urgency = open(sys.argv[3], "r").read().strip()
 	title = open(sys.argv[4], "r").read().strip()

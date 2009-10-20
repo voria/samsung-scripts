@@ -2,7 +2,7 @@
 # script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
 # refactoring by Stuart Herbert (stuart@stuartherbert.com)
 #
-# "Manage CPU governors and show CPU temperature"
+# "Manage CPU governors and show CPU info"
 #
 
 # IGNORE_GOVERNORS: List of governors we don't want to use.
@@ -17,19 +17,19 @@ AVAILABLE_GOVERNORS=`cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_
 
 # remove unwanted governors
 for GOVERNOR in $IGNORE_GOVERNORS; do
-    AVAILABLE_GOVERNORS=`echo $AVAILABLE_GOVERNORS | sed "s/$GOVERNOR//"`
+	AVAILABLE_GOVERNORS=`echo $AVAILABLE_GOVERNORS | sed "s/$GOVERNOR//"`
 done
 
 # determine next governor to switch to
 # we assume that 'ondemand' and 'performance' governors are always available
 case $CURRENT_GOVERNOR in
-    userspace)
-        if echo $AVAILABLE_GOVERNORS | grep powersave > /dev/null; then
-            NEXT_GOVERNOR="powersave"
-        else
-            NEXT_GOVERNOR="ondemand"
-        fi
-        ;;
+	userspace)
+		if echo $AVAILABLE_GOVERNORS | grep powersave > /dev/null; then
+			NEXT_GOVERNOR="powersave"
+		else
+			NEXT_GOVERNOR="ondemand"
+		fi
+		;;
 	powersave)
 		NEXT_GOVERNOR="ondemand"
 		;;
@@ -47,10 +47,10 @@ case $CURRENT_GOVERNOR in
 		if echo $AVAILABLE_GOVERNORS | grep userspace > /dev/null; then
 			NEXT_GOVERNOR="userspace"
 		else
-		    if echo $AVAILABLE_GOVERNORS | grep powersave > /dev/null; then
-		        NEXT_GOVERNOR="powersave"
-		    else
-			    NEXT_GOVERNOR="ondemand"
+			if echo $AVAILABLE_GOVERNORS | grep powersave > /dev/null; then
+				NEXT_GOVERNOR="powersave"
+			else
+				NEXT_GOVERNOR="ondemand"
 			fi
 		fi
 		;;
@@ -188,6 +188,9 @@ main ()
 				nextGovernor
 			fi
 			showStatus
+			if [ $DISTRO = 1 ]; then # Kubuntu: we need to sleep some time for handling governor switch. 
+				sleep 2
+			fi
 			;;
 		status)
 			showStatus

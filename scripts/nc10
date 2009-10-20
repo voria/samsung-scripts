@@ -25,16 +25,16 @@ determinePopup ()
 	if [ -t 0 ]; then
 		export USE_POPUP=0
 	else
-		export USE_POPUP=1 # use kdialog
+		export USE_POPUP=1
 	fi
 }
 
 determineDistro ()
 {
 	if [ -f /usr/lib/notify-osd/notify-osd ]; then
-		export DISTRO=0 # Ubuntu - use notify-osd
+		export DISTRO=0 # Ubuntu: use notify-osd
 	else
-		export DISTRO=1 # Kubuntu - use kdialog
+		export DISTRO=1 # Kubuntu: use kdialog
 	fi
 }
 

@@ -37,6 +37,9 @@ binary-indep: checkroot
 	$(install_file) debian/changelog debian/tmp/usr/share/doc/nc10-scripts/
 	$(install_file) debian/copyright debian/tmp/usr/share/doc/nc10-scripts/
 	
+	$(install_dir) debian/tmp/etc/default/
+	$(install_file) default/nc10-scripts debian/tmp/etc/default/ 
+	
 	dpkg-gencontrol -pnc10-scripts -isp
 	chown -R root.root debian/tmp
 	chmod -R go=rX debian/tmp

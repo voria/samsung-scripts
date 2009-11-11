@@ -16,7 +16,7 @@ case "$1" in
 		echo "%admin ALL=(ALL) NOPASSWD: NC10_SCRIPT" >> /etc/sudoers
 
 		# Update gconf default keybindings
-		if [ -x /usr/sbin/update-gconf-defaults ]; then
+		if [ -x /usr/bin/update-gconf-defaults ]; then
 			update-gconf-defaults
 		fi
 		;;

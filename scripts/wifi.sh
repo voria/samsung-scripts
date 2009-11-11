@@ -5,6 +5,13 @@
 # "Toggle wireless on/off on Samsung NC10"
 #
 
+if [ -f /etc/default/nc10-scripts ]; then
+	. /etc/default/nc10-scripts
+else
+	# Set the default wireless module
+	WIRELESS_MODULE="ath5k"
+fi
+
 case $LOCALE in
 	de*)
 		POPUP_TITLE="Funknetzwerk"
@@ -44,18 +51,18 @@ ICON_DISCONNECTED=notification-network-wireless-disconnected
 disableWifi ()
 {
 	mustBeRoot
-	modprobe -r ath5k
+	modprobe -r $WIRELESS_MODULE
 }
 
 enableWifi ()
 {
 	mustBeRoot
-	modprobe ath5k
+	modprobe $WIRELESS_MODULE
 }
 
 isWifiEnabled ()
 {
-	if lsmod | grep ath5k > /dev/null; then
+	if lsmod | grep $WIRELESS_MODULE > /dev/null; then
 		return 0
 	else
 		return 1

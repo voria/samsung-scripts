@@ -5,12 +5,12 @@
 # "Manage CPU governors and show CPU info"
 #
 
-# IGNORE_GOVERNORS: List of governors we don't want to use.
-# 'ondemand' and 'performance' are supposed to be always available.
-# So, they will be used even if you add them to the list.
-# Example: we want to use 'ondemand' and 'performance' governors only, then:
-# IGNORE_GOVERNORS="userspace powersave conservative"
-IGNORE_GOVERNORS="userspace conservative"
+if [ -f /etc/default/nc10-scripts ]; then
+	. /etc/default/nc10-scripts
+else
+	# Set the default value for IGNORE_GOVERNORS
+	IGNORE_GOVERNORS="userspace conservative"
+fi
 
 CURRENT_GOVERNOR=`cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor`
 AVAILABLE_GOVERNORS=`cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors`

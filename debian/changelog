@@ -1,3 +1,9 @@
+nc10-scripts (3.0~ppa2~nc10~karmic) karmic; urgency=low
+
+  * Fix 'update-gconf-defaults' in debian/postinst,debian/postrm. 
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 11 Nov 2009 16:30:05 +0000
+
 nc10-scripts (3.0~ppa1~nc10~karmic) karmic; urgency=low
 
   * Add support for Kubuntu.

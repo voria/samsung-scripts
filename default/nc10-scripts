@@ -1,0 +1,11 @@
+# Configuration file for nc10-scripts
+
+# List of governors we don't want to use.
+# 'ondemand' and 'performance' are supposed to be always available.
+# So, they will be used even if you add them to the list.
+# Example: we want to use 'ondemand' and 'performance' governors only, then:
+# IGNORE_GOVERNORS="userspace powersave conservative"
+IGNORE_GOVERNORS="userspace conservative"
+
+# Kernel module used by wireless card
+WIRELESS_MODULE="ath5k"

@@ -47,7 +47,7 @@ disableWifi ()
 	modprobe -r $WIRELESS_MODULE
 	# Save status
 	if [ -n $WIRELESS_STATUS ]; then
-		echo 0 > $WIRELESS_STATUS
+		echo -n 0 > $WIRELESS_STATUS
 	fi
 }
 
@@ -57,7 +57,7 @@ enableWifi ()
 	modprobe $WIRELESS_MODULE
 	# Save status
 	if [ -n $WIRELESS_STATUS ]; then
-		echo 1 > $WIRELESS_STATUS
+		echo -n 1 > $WIRELESS_STATUS
 	fi
 }
 

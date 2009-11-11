@@ -1,0 +1,33 @@
+#!/bin/bash
+
+case ${1} in
+	resume|thaw)
+		if [ -f /etc/default/nc10-scripts ]; then
+			. /etc/default/nc10-scripts
+		else
+			# Do nothing
+			exit 0
+		fi
+		# Restore status of devices
+		if [ `cat $BLUETOOTH_STATUS` -eq 1 ]; then
+			nc10 bluetooth on
+		else
+			nc10 bluetooth off
+		fi
+		if [ `cat $WEBCAM_STATUS` -eq 1 ]; then
+			nc10 webcam on
+		else
+			nc10 webcam off
+		fi
+		if [ `cat $WIRELESS_STATUS` -eq 1 ]; then
+			nc10 wifi on
+		else
+			# Wifi radio is killed when module is unloaded.
+			# So, we need to load and then unload it.
+			modprobe $WIRELESS_MODULE
+			nc10 wifi off
+		fi
+		;;
+esac
+
+exit 0

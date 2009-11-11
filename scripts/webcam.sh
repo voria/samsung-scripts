@@ -58,7 +58,7 @@ disableWebcam ()
 	modprobe -r $WEBCAM_MODULE > /dev/null
 	# Save status
 	if [ -n $WEBCAM_STATUS ]; then
-		echo 0 > $WEBCAM_STATUS
+		echo -n 0 > $WEBCAM_STATUS
 	fi
 }
 
@@ -68,7 +68,7 @@ enableWebcam ()
 	modprobe $WEBCAM_MODULE
 	# Save status
 	if [ -n $WEBCAM_STATUS ]; then
-		echo 1 > $WEBCAM_STATUS
+		echo -n 1 > $WEBCAM_STATUS
 	fi
 }
 

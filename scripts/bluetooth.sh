@@ -45,7 +45,7 @@ disableBluetooth ()
 	hciconfig hci0 down
 	# Save status
 	if [ -n $BLUETOOTH_STATUS ]; then
-		echo 0 > $BLUETOOTH_STATUS
+		echo -n 0 > $BLUETOOTH_STATUS
 	fi
 }
 
@@ -55,7 +55,7 @@ enableBluetooth ()
 	hciconfig hci0 up
 	# Save status
 	if [ -n $BLUETOOTH_STATUS ]; then
-		echo 1 > $BLUETOOTH_STATUS
+		echo -n 1 > $BLUETOOTH_STATUS
 	fi
 }
 

@@ -21,6 +21,12 @@ binary-indep: checkroot
 	$(install_script) debian/postinst debian/tmp/DEBIAN/
 	$(install_script) debian/postrm debian/tmp/DEBIAN/
 	
+	$(install_dir) debian/tmp/etc/default/
+	$(install_file) default/nc10-scripts debian/tmp/etc/default/
+	
+	$(install_dir) debian/tmp/etc/pm/sleep.d/
+	$(install_script) sleep.d/20_nc10-scripts debian/tmp/etc/pm/sleep.d/ 
+	
 	$(install_dir) debian/tmp/usr/bin/
 	$(install_script) scripts/nc10 debian/tmp/usr/bin/
 	
@@ -40,9 +46,6 @@ binary-indep: checkroot
 	$(install_dir) debian/tmp/usr/share/doc/nc10-scripts/
 	$(install_file) debian/changelog debian/tmp/usr/share/doc/nc10-scripts/
 	$(install_file) debian/copyright debian/tmp/usr/share/doc/nc10-scripts/
-	
-	$(install_dir) debian/tmp/etc/default/
-	$(install_file) default/nc10-scripts debian/tmp/etc/default/ 
 	
 	dpkg-gencontrol -pnc10-scripts -isp
 	chown -R root.root debian/tmp

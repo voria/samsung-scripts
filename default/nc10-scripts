@@ -1,4 +1,6 @@
+#
 # Configuration file for nc10-scripts
+#
 
 # List of governors we don't want to use.
 # 'ondemand' and 'performance' are supposed to be always available.
@@ -9,3 +11,11 @@ IGNORE_GOVERNORS="userspace conservative"
 
 # Kernel module used by wireless card
 WIRELESS_MODULE="ath5k"
+
+# Kernel module used by webcam
+WEBCAM_MODULE="uvcvideo"
+
+# Positions where the status of devices is stored
+BLUETOOTH_STATUS="/usr/lib/nc10/status/bluetooth"
+WEBCAM_STATUS="/usr/lib/nc10/status/webcam"
+WIRELESS_STATUS="/usr/lib/nc10/status/wireless"

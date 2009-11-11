@@ -15,6 +15,18 @@ NH_URGENCY="/tmp/notify_helper-urgency"
 NH_TITLE="/tmp/notify_helper-title"
 NH_MESSAGE="/tmp/notify_helper-message"
 
+# Load configuration
+if [ -f /etc/default/nc10-scripts ]; then
+	. /etc/default/nc10-scripts
+else
+	# Set default values
+	IGNORE_GOVERNORS="userspace conservative"
+	WIRELESS_MODULE="ath5k"
+	BLUETOOTH_STATUS=""
+	WEBCAM_STATUS=""
+	WIRELESS_STATUS=""
+fi
+
 determineLocale ()
 {
 	export LOCALE="$LANG"

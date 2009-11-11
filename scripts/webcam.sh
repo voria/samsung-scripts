@@ -55,19 +55,27 @@ ICON=camera-web
 disableWebcam ()
 {
 	mustBeRoot
-	modprobe -r uvcvideo > /dev/null
+	modprobe -r $WEBCAM_MODULE > /dev/null
+	# Save status
+	if [ -n $WEBCAM_STATUS ]; then
+		echo 0 > $WEBCAM_STATUS
+	fi
 }
 
 enableWebcam ()
 {
 	mustBeRoot
-	modprobe uvcvideo
+	modprobe $WEBCAM_MODULE
+	# Save status
+	if [ -n $WEBCAM_STATUS ]; then
+		echo 1 > $WEBCAM_STATUS
+	fi
 }
 
 isWebcamEnabled ()
 {
-	if lsmod | grep uvcvideo > /dev/null; then
-		if ! modprobe -r -n uvcvideo > /dev/null 2>&1; then
+	if lsmod | grep $WEBCAM_MODULE > /dev/null; then
+		if ! modprobe -r -n $WEBCAM_MODULE > /dev/null 2>&1; then
 			# webcam is enabled, and in use!
 			return 1
 		else

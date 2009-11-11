@@ -5,13 +5,6 @@
 # "Manage CPU governors and show CPU info"
 #
 
-if [ -f /etc/default/nc10-scripts ]; then
-	. /etc/default/nc10-scripts
-else
-	# Set the default value for IGNORE_GOVERNORS
-	IGNORE_GOVERNORS="userspace conservative"
-fi
-
 CURRENT_GOVERNOR=`cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor`
 AVAILABLE_GOVERNORS=`cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors`
 

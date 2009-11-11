@@ -27,6 +27,12 @@ binary-indep: checkroot
 	$(install_dir) debian/tmp/etc/pm/sleep.d/
 	$(install_script) sleep.d/20_nc10-scripts debian/tmp/etc/pm/sleep.d/ 
 	
+	$(install_dir) debian/tmp/etc/init/
+	$(install_file) upstart/nc10-scripts.conf debian/tmp/etc/init/
+	
+	$(install_dir) debian/tmp/etc/init.d/
+	ln -s /lib/init/upstart-job debian/tmp/etc/init.d/nc10-scripts
+	
 	$(install_dir) debian/tmp/usr/bin/
 	$(install_script) scripts/nc10 debian/tmp/usr/bin/
 	

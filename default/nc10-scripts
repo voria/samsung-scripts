@@ -9,13 +9,21 @@
 # IGNORE_GOVERNORS="userspace powersave conservative"
 IGNORE_GOVERNORS="userspace conservative"
 
-# Kernel module used by wireless card
+# Kernel module used by wireless card.
 WIRELESS_MODULE="ath5k"
 
-# Kernel module used by webcam
+# Kernel module used by webcam.
 WEBCAM_MODULE="uvcvideo"
 
-# Positions where the status of devices is stored
+# Kernel module used by bluetooth.
+BLUETOOTH_MODULE="btusb"
+
+# Set this to 'false' if you don't want the last status for bluetooth,
+# webcam and wireless restored after a suspend/hibernate/reboot cycle.
+LAST_STATUS_RESTORE=true
+
+# Positions where the status of devices is stored.
+# You don't need to modify them.
 BLUETOOTH_STATUS="/usr/lib/nc10/status/bluetooth"
 WEBCAM_STATUS="/usr/lib/nc10/status/webcam"
 WIRELESS_STATUS="/usr/lib/nc10/status/wireless"

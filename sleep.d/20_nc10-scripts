@@ -8,6 +8,12 @@ case ${1} in
 			# Do nothing
 			exit 0
 		fi
+		
+		if [ $LAST_STATUS_RESTORE = "false" ]; then
+			# We don't want to restore last status
+			exit 0
+		fi
+		
 		# Restore status of devices
 		if [ `cat $BLUETOOTH_STATUS` -eq 1 ]; then
 			nc10 bluetooth on
@@ -25,6 +31,7 @@ case ${1} in
 			# Wifi radio is killed when module is unloaded.
 			# So, we need to load and then unload it.
 			modprobe $WIRELESS_MODULE
+			sleep 2 # Wait some time, just in case
 			nc10 wifi off
 		fi
 		;;

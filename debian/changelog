@@ -1,3 +1,12 @@
+nc10-scripts (4.0~ppa1~nc10~karmic) karmic; urgency=low
+
+  * Move user customizable options in '/etc/default/nc10-scripts'.
+  * Last status for bluetooth, webcam and wireless is now restored after
+    a suspend/hibernate/reboot cycle by default.
+  * When bluetooth is disabled, kill the radio and remove the kernel module.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 11 Nov 2009 19:01:59 +0000
+
 nc10-scripts (3.0~ppa2~nc10~karmic) karmic; urgency=low
 
   * Fix 'update-gconf-defaults' in debian/postinst,debian/postrm. 

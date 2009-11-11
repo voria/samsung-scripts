@@ -18,5 +18,5 @@ Description: Scripts for Samsung NC10
  - <Shift><Ctrl><Alt>b --> Turn on/off the bluetooth.
  - <Shift><Ctrl><Alt>w --> Turn on/off the webcam.
  .
- NOTE: On Ubuntu, you have to enable the 'commands' plugin in
- advanced compiz configuration in order to use keybindings.
+ NOTE: On Ubuntu, make sure the 'commands' plugin is enabled in
+ advanced compiz configuration, or else the hotkeys will not work.

@@ -14,24 +14,26 @@ case ${1} in
 			exit 0
 		fi
 		
-		# Restore status of devices
-		if [ `cat $BLUETOOTH_STATUS` -eq 1 ]; then
-			nc10 bluetooth on
-		else
+		## Restore status of devices
+		# Get last status
+		BTS=`cat $BLUETOOTH_STATUS`
+		WCS=`cat $WEBCAM_STATUS`
+		WLS=`cat $WIRELESS_STATUS`
+		
+		# It's probably better to enable all devices, and
+		# then disable the ones that should be disabled.
+		nc10 bluetooth on
+		nc10 webcam on
+		nc10 wifi on
+		sleep 2 # Wait some time, just in case
+
+		if [ $BTS -eq 0 ]; then
 			nc10 bluetooth off
 		fi
-		if [ `cat $WEBCAM_STATUS` -eq 1 ]; then
-			nc10 webcam on
-		else
+		if [ $WCS -eq 0 ]; then
 			nc10 webcam off
 		fi
-		if [ `cat $WIRELESS_STATUS` -eq 1 ]; then
-			nc10 wifi on
-		else
-			# Wifi radio is killed when module is unloaded.
-			# So, we need to load and then unload it.
-			modprobe $WIRELESS_MODULE
-			sleep 2 # Wait some time, just in case
+		if [ $WLS -eq 0 ]; then
 			nc10 wifi off
 		fi
 		;;

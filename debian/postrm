@@ -10,6 +10,11 @@ case "$1" in
 		chown root:root /etc/sudoers
 		chmod 440 /etc/sudoers
 
+		# Remove status files
+		rm -f /usr/lib/nc10/status/bluetooth
+		rm -f /usr/lib/nc10/status/webcam
+		rm -f /usr/lib/nc10/status/wireless
+
 		# Update gconf default keybindings
 		if [ -x /usr/bin/update-gconf-defaults ]; then
 			update-gconf-defaults

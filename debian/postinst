@@ -15,6 +15,20 @@ case "$1" in
 		echo "Cmnd_Alias	NC10_SCRIPT=/usr/bin/nc10" >> /etc/sudoers
 		echo "%admin ALL=(ALL) NOPASSWD: NC10_SCRIPT" >> /etc/sudoers
 
+		# Add status control files
+		BLUETOOTH_STATUS="/usr/lib/nc10/status/bluetooth"
+		WEBCAM_STATUS="/usr/lib/nc10/status/webcam"
+		WIRELESS_STATUS="/usr/lib/nc10/status/wireless"
+		if [ ! -f $BLUETOOTH_STATUS ]; then
+			echo -n 1 > $BLUETOOTH_STATUS
+		fi
+		if [ ! -f $WEBCAM_STATUS ]; then
+			echo -n 1 > $WEBCAM_STATUS
+		fi
+		if [ ! -f $WIRELESS_STATUS ]; then
+			echo -n 1 > $WIRELESS_STATUS
+		fi			
+
 		# Update gconf default keybindings
 		if [ -x /usr/bin/update-gconf-defaults ]; then
 			update-gconf-defaults

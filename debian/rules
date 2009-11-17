@@ -41,7 +41,6 @@ binary-indep: checkroot
 	$(install_script) scripts/*.py debian/tmp/usr/lib/nc10/
 	
 	$(install_dir) debian/tmp/usr/lib/nc10/status/
-	$(install_file) status/* debian/tmp/usr/lib/nc10/status/
 	
 	$(install_dir) debian/tmp/usr/share/gconf/defaults/
 	$(install_file) gconf/10_nc10-scripts debian/tmp/usr/share/gconf/defaults/

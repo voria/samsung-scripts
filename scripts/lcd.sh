@@ -61,6 +61,8 @@ main ()
 		summary)
 			showSummary
 			;;
+		status)
+			;;
 		*)
 			toggleBacklight
 			;;

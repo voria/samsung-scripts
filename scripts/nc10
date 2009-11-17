@@ -70,7 +70,7 @@ listOptions ()
 {
 	echo "nc10 - Utilities for your Samsung NC10 netbook"
 	echo 
-	
+	echo "nc10 status - show status for all devices"
 	# list all of the available scripts, and their help messages
 	for x in `echo $SCRIPTS_DIR/*.sh` ; do
 		echo -n "nc10 `basename $x .sh` "
@@ -146,9 +146,14 @@ main ()
 
 	# if we get here, we have a command to run
 	scriptToRun="$1"
-	shift
-
-	runScript $scriptToRun "$@"
+	if [ $scriptToRun = "status" ]; then
+		for x in `echo $SCRIPTS_DIR/*.sh` ; do
+				runScript `basename $x .sh` status
+		done
+	else
+		shift
+		runScript $scriptToRun "$@"
+	fi
 }
 
 main "$@"

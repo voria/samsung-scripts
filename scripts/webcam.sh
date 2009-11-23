@@ -70,6 +70,10 @@ enableWebcam ()
 	if [ -n $WEBCAM_STATUS ]; then
 		echo -n 1 > $WEBCAM_STATUS
 	fi
+	# Set device autosuspend
+	if [ -n $WEBCAM_AUTOSUSPEND_PATH ]; then
+		echo auto > $WEBCAM_AUTOSUSPEND_PATH
+	fi
 }
 
 isWebcamEnabled ()

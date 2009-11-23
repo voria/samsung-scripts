@@ -59,6 +59,10 @@ enableBluetooth ()
 	if [ -n $BLUETOOTH_STATUS ]; then
 		echo -n 1 > $BLUETOOTH_STATUS
 	fi
+	# Set device autosuspend
+	if [ -n $BLUETOOTH_AUTOSUSPEND_PATH ]; then
+		echo auto > $BLUETOOTH_AUTOSUSPEND_PATH
+	fi
 }
 
 isBluetoothEnabled ()

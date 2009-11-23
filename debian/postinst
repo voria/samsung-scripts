@@ -10,10 +10,11 @@ case "$1" in
 		chown root:root /etc/sudoers
 		chmod 440 /etc/sudoers
 
-		# Add new rules for the scripts that need them.
+		# Add new rules in sudoers file
 		echo "## Rule for NC10 scripts" >> /etc/sudoers
 		echo "Cmnd_Alias	NC10_SCRIPT=/usr/bin/nc10" >> /etc/sudoers
 		echo "%admin ALL=(ALL) NOPASSWD: NC10_SCRIPT" >> /etc/sudoers
+		echo "gdm ALL=(ALL) NOPASSWD: NC10_SCRIPT" >> /etc/sudoers
 
 		# Add status control files
 		BLUETOOTH_STATUS="/usr/lib/nc10/status/bluetooth"

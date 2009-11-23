@@ -1,3 +1,14 @@
+nc10-scripts (4.0~ppa4~nc10~karmic) karmic; urgency=low
+
+  * Make the scripts work in gdm login window too.
+  * Add new options in /etc/default/nc10-scripts to control devices
+    autosuspend.
+  * Set webcam and bluetooth autosuspend to auto when enabling them.
+  * Set default values for all options in /usr/lib/nc10 if configuration
+    file cannot be found.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 23 Nov 2009 11:13:30 +0000
+
 nc10-scripts (4.0~ppa3~nc10~karmic) karmic; urgency=low
 
   * Keep devices status between package updates.

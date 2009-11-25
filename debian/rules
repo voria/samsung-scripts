@@ -24,6 +24,9 @@ binary-indep: checkroot
 	$(install_dir) debian/tmp/etc/default/
 	$(install_file) default/nc10-scripts debian/tmp/etc/default/
 	
+	$(install_dir) debian/tmp/etc/bash_completion.d/
+	$(install_file) bash_completion.d/nc10 debian/tmp/etc/bash_completion.d/
+	
 	$(install_dir) debian/tmp/etc/pm/sleep.d/
 	$(install_script) sleep.d/20_nc10-scripts debian/tmp/etc/pm/sleep.d/ 
 	

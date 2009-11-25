@@ -9,9 +9,6 @@
 # IGNORE_GOVERNORS="userspace powersave conservative"
 IGNORE_GOVERNORS="userspace conservative"
 
-# Kernel module used by wireless card.
-WIRELESS_MODULE="ath5k"
-
 # Kernel module used by webcam.
 WEBCAM_MODULE="uvcvideo"
 

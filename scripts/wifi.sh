@@ -44,7 +44,7 @@ ICON_DISCONNECTED=notification-network-wireless-disconnected
 disableWifi ()
 {
 	mustBeRoot
-	modprobe -r $WIRELESS_MODULE
+	iwconfig wlan0 txpower off
 	# Save status
 	if [ -n $WIRELESS_STATUS ]; then
 		echo -n 0 > $WIRELESS_STATUS
@@ -54,7 +54,7 @@ disableWifi ()
 enableWifi ()
 {
 	mustBeRoot
-	modprobe $WIRELESS_MODULE
+	iwconfig wlan0 txpower auto
 	# Save status
 	if [ -n $WIRELESS_STATUS ]; then
 		echo -n 1 > $WIRELESS_STATUS
@@ -63,10 +63,10 @@ enableWifi ()
 
 isWifiEnabled ()
 {
-	if lsmod | grep $WIRELESS_MODULE > /dev/null; then
-		return 0
-	else
+	if iwconfig wlan0 | grep Tx-Power=off > /dev/null; then
 		return 1
+	else
+		return 0
 	fi
 }
 

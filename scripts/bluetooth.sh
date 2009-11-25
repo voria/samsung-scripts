@@ -43,7 +43,7 @@ disableBluetooth ()
 {
 	mustBeRoot
 	hciconfig hci0 down
-	modprobe -r $BLUETOOTH_MODULE
+	modprobe -r btusb
 	# Save status
 	if [ -n $BLUETOOTH_STATUS ]; then
 		echo -n 0 > $BLUETOOTH_STATUS
@@ -53,7 +53,7 @@ disableBluetooth ()
 enableBluetooth ()
 {
 	mustBeRoot
-	modprobe $BLUETOOTH_MODULE
+	modprobe btusb
 	hciconfig hci0 up
 	# Save status
 	if [ -n $BLUETOOTH_STATUS ]; then
@@ -67,7 +67,7 @@ enableBluetooth ()
 
 isBluetoothEnabled ()
 {
-	if lsmod | grep $BLUETOOTH_MODULE > /dev/null ; then
+	if lsmod | grep btusb > /dev/null ; then
 		return 0
 	else
 		return 1

@@ -9,12 +9,6 @@
 # IGNORE_GOVERNORS="userspace powersave conservative"
 IGNORE_GOVERNORS="userspace conservative"
 
-# Kernel module used by webcam.
-WEBCAM_MODULE="uvcvideo"
-
-# Kernel module used by bluetooth.
-BLUETOOTH_MODULE="btusb"
-
 # These are the paths used to set devices autosuspend.
 # If you want to disable this feature, set them to empty strings.
 # Example: WEBCAM_AUTOSUSPEND_PATH=""

@@ -21,9 +21,6 @@ if [ -f /etc/default/nc10-scripts ]; then
 else
 	# Set default values
 	IGNORE_GOVERNORS="userspace conservative"
-	WIRELESS_MODULE="ath5k"
-	WEBCAM_MODULE="uvcvideo"
-	BLUETOOTH_MODULE="btusb"
 	WEBCAM_AUTOSUSPEND_PATH="" 
 	BLUETOOTH_AUTOSUSPEND_PATH=""
 	LAST_STATUS_RESTORE=false

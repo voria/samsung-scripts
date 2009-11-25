@@ -1,3 +1,13 @@
+nc10-scripts (4.0~ppa5~nc10~karmic) karmic; urgency=low
+
+  * Use iwconfig commands to toggle wireless rfkill, instead
+    of module removal.
+  * Webcam and bluetooth kernel modules are always the same,
+    so there is no need for options in /etc/default/nc10-scripts.
+  * Add bash-completion support for all the scripts.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 25 Nov 2009 15:53:45 +0000
+
 nc10-scripts (4.0~ppa4~nc10~karmic) karmic; urgency=low
 
   * Make the scripts work in gdm login window too.

@@ -1,3 +1,12 @@
+nc10-scripts (4.0~ppa6~nc10~karmic) karmic; urgency=low
+
+  * Add back the module removal method for toggling wireless,
+    along with the new iwconfig method.
+  * Add a new option in '/etc/default/nc10-scripts' to select
+    which method to use. 
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sun, 29 Nov 2009 15:33:06 +0000
+
 nc10-scripts (4.0~ppa5~nc10~karmic) karmic; urgency=low
 
   * Use iwconfig commands to toggle wireless rfkill, instead

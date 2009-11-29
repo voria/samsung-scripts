@@ -5,9 +5,16 @@
 # List of governors we don't want to use.
 # 'ondemand' and 'performance' are supposed to be always available.
 # So, they will be used even if you add them to the list.
-# Example: we want to use 'ondemand' and 'performance' governors only, then:
+# Example: Use 'ondemand' and 'performance' governors only:
 # IGNORE_GOVERNORS="userspace powersave conservative"
 IGNORE_GOVERNORS="userspace conservative"
+
+# Method to use for enable/disable wireless:
+# 0 - iwconfig commands
+# 1 - module removal
+# Note: The WIRELESS_MODULE option is ignored if WIRELESS_TOGGLE_METHOD=0
+WIRELESS_TOGGLE_METHOD=0
+WIRELESS_MODULE="ath5k"
 
 # These are the paths used to set devices autosuspend.
 # If you want to disable this feature, set them to empty strings.

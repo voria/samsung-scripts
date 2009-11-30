@@ -1,0 +1,10 @@
+etc/default/
+etc/bash_completion.d/
+etc/pm/sleep.d/
+etc/init/
+etc/init.d/
+usr/bin/
+usr/lib/nc10/status/
+usr/share/gconf/defaults/
+usr/share/kde4/apps/khotkeys/
+usr/share/doc/nc10-scripts/

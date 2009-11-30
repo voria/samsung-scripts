@@ -1,67 +1,32 @@
 #!/usr/bin/make -f
 
-install_dir=install -d -m 755
-install_file=install -m 644
-install_script=install -m 755
+#export DH_VERBOSE=1
 
 build:
 
 clean:
-	$(checkdir)
-	-rm -f *~ */*~ debian/files* debian/*substvars
-	-rm -rf debian/tmp
+	dh_testdir
+	dh_testroot
 	rm -rf .bzr*
 	rm -rf .project
 	rm -rf .pydevproject
+	dh_clean
 
-binary-indep: checkroot
-	$(checkdir)
-	-rm -rf debian/tmp
-	$(install_dir) debian/tmp/DEBIAN/
-	$(install_script) debian/postinst debian/tmp/DEBIAN/
-	$(install_script) debian/postrm debian/tmp/DEBIAN/
-	
-	$(install_dir) debian/tmp/etc/default/
-	$(install_file) default/nc10-scripts debian/tmp/etc/default/
-	
-	$(install_dir) debian/tmp/etc/bash_completion.d/
-	$(install_file) bash_completion.d/nc10 debian/tmp/etc/bash_completion.d/
-	
-	$(install_dir) debian/tmp/etc/pm/sleep.d/
-	$(install_script) sleep.d/20_nc10-scripts debian/tmp/etc/pm/sleep.d/ 
-	
-	$(install_dir) debian/tmp/etc/init/
-	$(install_file) upstart/nc10-scripts.conf debian/tmp/etc/init/
-	
-	$(install_dir) debian/tmp/etc/init.d/
-	ln -s /lib/init/upstart-job debian/tmp/etc/init.d/nc10-scripts
-	
-	$(install_dir) debian/tmp/usr/bin/
-	$(install_script) scripts/nc10 debian/tmp/usr/bin/
-	
-	$(install_dir) debian/tmp/usr/lib/nc10/
-	$(install_script) scripts/*.sh debian/tmp/usr/lib/nc10/
-	$(install_script) scripts/*.py debian/tmp/usr/lib/nc10/
-	
-	$(install_dir) debian/tmp/usr/lib/nc10/status/
-	
-	$(install_dir) debian/tmp/usr/share/gconf/defaults/
-	$(install_file) gconf/10_nc10-scripts debian/tmp/usr/share/gconf/defaults/
-	
-	$(install_dir) debian/tmp/usr/share/kde4/apps/khotkeys/
-	$(install_file) khotkeys/nc10-scripts.khotkeys debian/tmp/usr/share/kde4/apps/khotkeys/
+binary-indep: clean
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+	dh_install
+	dh_installchangelogs
+	dh_installdocs
+	dh_installinit --no-start
+	dh_installdeb
+	dh_fixperms
+	dh_gencontrol
+	dh_builddeb
 
-	$(install_dir) debian/tmp/usr/share/doc/nc10-scripts/
-	$(install_file) debian/changelog debian/tmp/usr/share/doc/nc10-scripts/
-	$(install_file) debian/copyright debian/tmp/usr/share/doc/nc10-scripts/
-	
-	dpkg-gencontrol -pnc10-scripts -isp
-	chown -R root.root debian/tmp
-	chmod -R go=rX debian/tmp
-	dpkg --build debian/tmp ..
-
-binary:		binary-indep
+binary:	binary-indep
 
 binary-arch: binary
 
-.PHONY: binary-arch binary binary-indep clean checkroot
+.PHONY: binary-arch binary binary-indep clean

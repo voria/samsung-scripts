@@ -1,3 +1,10 @@
+nc10-scripts (5.0~ppa2~nc10~karmic) karmic; urgency=low
+
+  * Add 'de' locale to 'scripts/cpuperf.sh'.
+    Thanks to Python for providing it.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 12 Dec 2009 20:17:40 +0000
+
 nc10-scripts (5.0~ppa1~nc10~karmic) karmic; urgency=low
 
   * Migrate to debhelper build system.

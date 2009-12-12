@@ -51,6 +51,17 @@ esac
 
 # set language strings
 case "$LOCALE" in
+	de*)
+		popup_title="Prozessor"
+		cpu_temp="Temperatur:"
+		cpu_freq="Frequenz:"
+		cpu_governor="Modus:"
+		governor_powersave="Energie sparen"
+		governor_ondemand="Auf Abruf"
+		governor_conservative="Zurückhaltend"
+		governor_performance="Leistung"
+		governor_userspace="Benutzerdefiniert"
+		;;
 	fr*)
 		popup_title="Processeur"
 		cpu_temp="Température:"

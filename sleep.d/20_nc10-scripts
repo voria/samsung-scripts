@@ -25,7 +25,7 @@ case ${1} in
 		nc10 bluetooth on
 		nc10 webcam on
 		nc10 wifi on
-		sleep 2 # Wait some time, just in case
+		sleep 3 # Wait some time, just in case
 
 		if [ $BTS -eq 0 ]; then
 			nc10 bluetooth off

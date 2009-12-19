@@ -1,3 +1,9 @@
+nc10-scripts (5.0~ppa3~nc10~karmic) karmic; urgency=low
+
+  * Sleep for 3 seconds when restoring devices status. 
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 19 Dec 2009 16:10:36 +0100
+
 nc10-scripts (5.0~ppa2~nc10~karmic) karmic; urgency=low
 
   * Add 'de' locale to 'scripts/cpuperf.sh'.

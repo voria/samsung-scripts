@@ -1,3 +1,10 @@
+nc10-scripts (5.0~ppa4~nc10~karmic) karmic; urgency=low
+
+  * Add back the 'wmswitcher.sh' script to toggle compiz on/off,
+    mapped to <Shift><Ctrl><Alt>m.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 05 Jan 2010 10:04:52 +0100
+
 nc10-scripts (5.0~ppa3~nc10~karmic) karmic; urgency=low
 
   * Sleep for 3 seconds when restoring devices status. 

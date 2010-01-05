@@ -1,7 +1,12 @@
 bash_completion.d/nc10 etc/bash_completion.d/
 sleep.d/20_nc10-scripts etc/pm/sleep.d/
 scripts/nc10 usr/bin/
-scripts/*.sh usr/lib/nc10/
-scripts/*.py usr/lib/nc10/
+scripts/wmswitcher.sh usr/bin/
+scripts/bluetooth.sh usr/lib/nc10/
+scripts/cpuperf.sh usr/lib/nc10/
+scripts/lcd.sh usr/lib/nc10/
+scripts/notify_helper.py usr/lib/nc10/
+scripts/webcam.sh usr/lib/nc10/
+scripts/wifi.sh usr/lib/nc10/
 gconf/10_nc10-scripts usr/share/gconf/defaults/
 khotkeys/nc10-scripts.khotkeys usr/share/kde4/apps/khotkeys/

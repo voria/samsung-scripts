@@ -17,6 +17,7 @@ Description: Scripts for Samsung NC10
  - FN-F9 --> Turn on/off the wireless card.
  - <Shift><Ctrl><Alt>b --> Turn on/off the bluetooth.
  - <Shift><Ctrl><Alt>w --> Turn on/off the webcam.
+ - <Shift><Ctrl><Alt>m --> Toggle compiz on/off.
  .
  NOTE: On Ubuntu, make sure the 'commands' plugin is enabled in
  advanced compiz configuration, or else the hotkeys will not work.

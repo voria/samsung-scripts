@@ -1,3 +1,10 @@
+nc10-scripts (5.0~ppa5~nc10~karmic) karmic; urgency=low
+
+  * Disable/enable bluetooth service when disabling/enabling
+    bluetooth.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 12 Jan 2010 15:27:16 +0000
+
 nc10-scripts (5.0~ppa4~nc10~karmic) karmic; urgency=low
 
   * Add back the 'wmswitcher.sh' script to toggle compiz on/off,

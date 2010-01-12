@@ -43,6 +43,7 @@ disableBluetooth ()
 {
 	mustBeRoot
 	hciconfig hci0 down
+	service bluetooth stop
 	modprobe -r btusb
 	# Save status
 	if [ -n $BLUETOOTH_STATUS ]; then
@@ -54,6 +55,7 @@ enableBluetooth ()
 {
 	mustBeRoot
 	modprobe btusb
+	service bluetooth start
 	hciconfig hci0 up
 	# Save status
 	if [ -n $BLUETOOTH_STATUS ]; then

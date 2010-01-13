@@ -1,3 +1,10 @@
+nc10-scripts (5.0~ppa7~nc10~karmic) karmic; urgency=low
+
+  * Remove temp files when they are not needed anymore in 'notify_helper.py'.
+  * Use per-user temp files in order to avoid permissions conflicts.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 13 Jan 2010 16:09:52 +0100
+
 nc10-scripts (5.0~ppa6~nc10~karmic) karmic; urgency=low
 
   * Change default map for bluetooth toggling to FN-F7.

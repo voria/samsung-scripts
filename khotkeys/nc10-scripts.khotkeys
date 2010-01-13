@@ -87,7 +87,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_3Triggers0]
-Key=Ctrl+Alt+Shift+B
+Key=Launch (4)
 Type=SHORTCUT
 Uuid={8ef11060-80c4-4442-96eb-03bd44ffe0bc}
 

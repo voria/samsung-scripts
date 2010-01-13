@@ -24,9 +24,13 @@ open(sys.argv[1], "w").write(str(os.getpid()))
 def notifyUpdate(signum = None, frame = None):
 	# Read needed info from temp files
 	icon = open(sys.argv[2], "r").read().strip()
+	os.remove(sys.argv[2])
 	urgency = open(sys.argv[3], "r").read().strip()
+	os.remove(sys.argv[3])
 	title = open(sys.argv[4], "r").read().strip()
+	os.remove(sys.argv[4])
 	message = open(sys.argv[5], "r").read().strip()
+	os.remove(sys.argv[5])
 	notify.update(title, message, icon)
 	if urgency == "low":
 		notify.set_urgency(pynotify.URGENCY_LOW)

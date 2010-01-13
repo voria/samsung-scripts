@@ -8,13 +8,6 @@
 
 SCRIPTS_DIR="/usr/lib/nc10"
 
-# notify_helper.py temp files
-NH_PID="/tmp/notify_helper-pid"
-NH_ICON="/tmp/notify_helper-icon"
-NH_URGENCY="/tmp/notify_helper-urgency"
-NH_TITLE="/tmp/notify_helper-title"
-NH_MESSAGE="/tmp/notify_helper-message"
-
 # Load configuration
 if [ -f /etc/default/nc10-scripts ]; then
 	. /etc/default/nc10-scripts
@@ -60,6 +53,16 @@ determineSudoUser ()
 	if [ -z $SUDO_USER ]; then
        		export SUDO_USER=$USER
 	fi
+}
+
+setNotifyHelperTempFiles ()
+{
+	# notify_helper.py temp files
+	NH_PID="/tmp/notify_helper-pid-$SUDO_USER"
+	NH_ICON="/tmp/notify_helper-icon-$SUDO_USER"
+	NH_URGENCY="/tmp/notify_helper-urgency-$SUDO_USER"
+	NH_TITLE="/tmp/notify_helper-title-$SUDO_USER"
+	NH_MESSAGE="/tmp/notify_helper-message-$SUDO_USER"
 }
 
 mustBeRoot ()
@@ -140,6 +143,7 @@ main ()
 	determinePopup
 	determineDistro
 	determineSudoUser
+	setNotifyHelperTempFiles
 
 	# has the user asked us what they want to do?
 	if [[ -z $1 ]] ; then

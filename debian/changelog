@@ -1,3 +1,9 @@
+nc10-scripts (5.0~ppa9~nc10~karmic) karmic; urgency=low
+
+  * Fix typo in 'nc10' script. 
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 13 Jan 2010 19:11:33 +0100
+
 nc10-scripts (5.0~ppa8~nc10~karmic) karmic; urgency=low
 
   * Do not use popups if $SUDO_USER is not specified.

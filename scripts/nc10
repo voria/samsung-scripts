@@ -51,7 +51,7 @@ determineSudoUser ()
 {
 	# If $SUDO_USER is not specified, defaults to current user.
 	if [ -z $SUDO_USER ]; then
-       		export SUDO_USER=$USER
+		export SUDO_USER=$USER
 	fi
 }
 
@@ -113,24 +113,26 @@ showHelp ()
 # $4 - message
 showPopup ()
 {
-	if [ $USE_POPUP = 1 ]; then
-		if [ $DISTRO = 0 ]; then # Ubuntu: use notify-osd
-			# Create temp files holding informations we need for the notification bubble, owned by $SUDO_USER.
-			echo "$1" > $NH_ICON; echo "$2" > $NH_URGENCY; echo "$3" > $NH_TITLE; echo "$4" > $NH_MESSAGE
-			chown $SUDO_USER $NH_ICON $NH_URGENCY $NH_TITLE $NH_MESSAGE
-			if [ -f $NH_PID ]; then
-				# Update current notification bubble and sleep while it's showed
-				kill -12 `cat $NH_PID`
-				sleep 5
-			else
-				# Create a new notification bubble
-				sudo -u $SUDO_USER -- $SCRIPTS_DIR/notify_helper.py $NH_PID $NH_ICON $NH_URGENCY $NH_TITLE $NH_MESSAGE
+	if [ -n $SUDO_USER ]; then
+		if [ $USE_POPUP = 1 ]; then
+			if [ $DISTRO = 0 ]; then # Ubuntu: use notify-osd
+				# Create temp files holding informations we need for the notification bubble, owned by $SUDO_USER.
+				echo "$1" > $NH_ICON; echo "$2" > $NH_URGENCY; echo "$3" > $NH_TITLE; echo "$4" > $NH_MESSAGE
+				chown $SUDO_USER $NH_ICON $NH_URGENCY $NH_TITLE $NH_MESSAGE
+				if [ -f $NH_PID ]; then
+					# Update current notification bubble and sleep while it's showed
+					kill -12 `cat $NH_PID`
+					sleep 5
+				else
+					# Create a new notification bubble
+					sudo -u $SUDO_USER -- $SCRIPTS_DIR/notify_helper.py $NH_PID $NH_ICON $NH_URGENCY $NH_TITLE $NH_MESSAGE
+				fi
+			else # DISTRO = 1 (Kubuntu: use kdialog)
+				sudo -u $SUDO_USER -- kdialog --title "$3" --passivepopup "$4" 3
 			fi
-		else # DISTRO = 1 (Kubuntu: use kdialog)
-			sudo -u $SUDO_USER -- kdialog --title "$3" --passivepopup "$4" 3
+		else
+			echo "$3 - $4"
 		fi
-	else
-		echo "$3 - $4"
 	fi
 }
 

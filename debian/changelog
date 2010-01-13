@@ -1,3 +1,9 @@
+nc10-scripts (5.0~ppa6~nc10~karmic) karmic; urgency=low
+
+  * Change default map for bluetooth toggling to FN-F7.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 13 Jan 2010 13:16:59 +0000
+
 nc10-scripts (5.0~ppa5~nc10~karmic) karmic; urgency=low
 
   * Disable/enable bluetooth service when disabling/enabling

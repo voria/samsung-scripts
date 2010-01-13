@@ -113,7 +113,7 @@ showHelp ()
 # $4 - message
 showPopup ()
 {
-	if [ -n $SUDO_USER ]; then
+	if [ $SUDO_USER != "" ]; then
 		if [ $USE_POPUP = 1 ]; then
 			if [ $DISTRO = 0 ]; then # Ubuntu: use notify-osd
 				# Create temp files holding informations we need for the notification bubble, owned by $SUDO_USER.

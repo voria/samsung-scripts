@@ -1,4 +1,4 @@
-samsung-scripts (6.0~ppa1~nc10~karmic) UNRELEASED; urgency=low
+samsung-scripts (6.0~ppa1~nc10~karmic) karmic; urgency=low
 
   * Package 'nc10-scripts' renamed as 'samsung-scripts'.
   * Main script ('nc10') renamed as 'samsung-scripts'.

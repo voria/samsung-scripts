@@ -17,8 +17,8 @@ binary-indep: clean
 	dh_testroot
 	dh_installdirs
 	dh_install
-	dh_installchangelogs
-	dh_installdocs
+	dh_installchangelogs -psamsung-scripts
+	dh_installdocs -psamsung-scripts
 	dh_installinit --no-start
 	dh_installdeb
 	dh_fixperms

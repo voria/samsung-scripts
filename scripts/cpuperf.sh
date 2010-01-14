@@ -2,7 +2,7 @@
 # script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
 # refactoring by Stuart Herbert (stuart@stuartherbert.com)
 #
-# "Manage CPU governors and show CPU info"
+# "Manage CPU governors and show CPU info on Samsung netbooks"
 #
 
 CURRENT_GOVERNOR=`cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor`
@@ -187,7 +187,7 @@ main ()
 			showHelp cpuperf
 			;;
 		auto)
-			PNUM=`ps ux | grep "nc10 cpuperf auto" | grep -v grep -c`
+			PNUM=`ps ux | grep "samsung-scripts cpuperf auto" | grep -v grep -c`
 			if [ $PNUM -gt 2 ]; then
 				nextGovernor
 			fi

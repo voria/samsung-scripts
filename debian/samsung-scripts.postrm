@@ -1,0 +1,31 @@
+#!/bin/sh
+
+case "$1" in
+	remove|purge)
+		# Remove old rule from sudoers file (installed by 'nc10-scripts' <= 5.0~ppa9~nc10~karmic)
+		sed "/NC10/d" /etc/sudoers > /etc/sudoers.new
+		rm -f /etc/sudoers
+		mv /etc/sudoers.new /etc/sudoers
+		# Remove old rule from sudoers file (installed by 'samsung-scripts' >= 6.0~ppa1~nc10~karmic)
+		sed "/SAMSUNG_SCRIPTS/d" /etc/sudoers > /etc/sudoers.new
+		rm -f /etc/sudoers
+		mv /etc/sudoers.new /etc/sudoers
+		# Make sure that permissions and owner/group for sudoers file are good
+		chown root:root /etc/sudoers
+		chmod 440 /etc/sudoers
+
+		# Remove status files (installed by 'nc10-scripts' <= 5.0~ppa9~nc10~karmic)
+		rm -f /usr/lib/nc10/status/bluetooth
+		rm -f /usr/lib/nc10/status/webcam
+		rm -f /usr/lib/nc10/status/wireless
+		# Remove status files (installed by 'samsung-scripts' >= 6.0~ppa1~nc10~karmic)
+		rm -f /usr/lib/samsung-scripts/status/bluetooth
+		rm -f /usr/lib/samsung-scripts/status/webcam
+		rm -f /usr/lib/samsung-scripts/status/wireless
+
+		# Update gconf default keybindings
+		if [ -x /usr/bin/update-gconf-defaults ]; then
+			update-gconf-defaults
+		fi
+		;;
+esac

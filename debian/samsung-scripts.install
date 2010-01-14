@@ -1,0 +1,12 @@
+bash_completion.d/samsung-scripts etc/bash_completion.d/
+sleep.d/20_samsung-scripts etc/pm/sleep.d/
+scripts/samsung-scripts usr/bin/
+scripts/wmswitcher.sh usr/bin/
+scripts/bluetooth.sh usr/lib/samsung-scripts/
+scripts/cpuperf.sh usr/lib/samsung-scripts/
+scripts/lcd.sh usr/lib/samsung-scripts/
+scripts/notify_helper.py usr/lib/samsung-scripts/
+scripts/webcam.sh usr/lib/samsung-scripts/
+scripts/wifi.sh usr/lib/samsung-scripts/
+gconf/10_samsung-scripts usr/share/gconf/defaults/
+khotkeys/samsung-scripts.khotkeys usr/share/kde4/apps/khotkeys/

@@ -1,5 +1,5 @@
 #
-# Configuration file for nc10-scripts
+# Configuration file for samsung-scripts
 #
 
 # List of governors we don't want to use.
@@ -28,6 +28,6 @@ LAST_STATUS_RESTORE=true
 
 # Positions where the status of devices is stored.
 # You don't need to modify them.
-BLUETOOTH_STATUS="/usr/lib/nc10/status/bluetooth"
-WEBCAM_STATUS="/usr/lib/nc10/status/webcam"
-WIRELESS_STATUS="/usr/lib/nc10/status/wireless"
+BLUETOOTH_STATUS="/usr/lib/samsung-scripts/status/bluetooth"
+WEBCAM_STATUS="/usr/lib/samsung-scripts/status/webcam"
+WIRELESS_STATUS="/usr/lib/samsung-scripts/status/wireless"

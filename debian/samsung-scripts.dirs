@@ -4,7 +4,7 @@ etc/pm/sleep.d/
 etc/init/
 etc/init.d/
 usr/bin/
-usr/lib/nc10/status/
+usr/lib/samsung-scripts/status/
 usr/share/gconf/defaults/
 usr/share/kde4/apps/khotkeys/
-usr/share/doc/nc10-scripts/
+usr/share/doc/samsung-scripts/

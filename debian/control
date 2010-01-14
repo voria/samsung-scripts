@@ -1,4 +1,4 @@
-Source: nc10-scripts
+Source: samsung-scripts
 Section: misc
 Priority: extra
 Maintainer: Fortunato Ventre (voRia) <vorione@gmail.com>
@@ -6,18 +6,25 @@ Build-Depends: debhelper (>= 7)
 Standards-Version: 3.8.0
 Homepage: http://www.voria.org/forum
 
-Package: nc10-scripts
+Package: samsung-scripts
+Replaces: nc10-scripts (<= 5.0~ppa9~nc10~karmic)
 Architecture: all
-Description: Scripts for Samsung NC10
- This package contains useful scripts for Samsung NC10.
+Description: Scripts for Samsung netbooks
+ This package contains useful scripts for Samsung netbooks.
  .
  These are the default keybindings:
  - FN-F5 --> Turn on/off the screen brightness.
+ - FN-F7 --> Turn on/off the bluetooth.
  - FN-F8 --> Show CPU temperature and manage CPU governors.
  - FN-F9 --> Turn on/off the wireless card.
- - <Shift><Ctrl><Alt>b --> Turn on/off the bluetooth.
  - <Shift><Ctrl><Alt>w --> Turn on/off the webcam.
  - <Shift><Ctrl><Alt>m --> Toggle compiz on/off.
  .
  NOTE: On Ubuntu, make sure the 'commands' plugin is enabled in
  advanced compiz configuration, or else the hotkeys will not work.
+
+Package: nc10-scripts
+Depends: samsung-scripts
+Architecture: all
+Description: Dummy package for migration to the new 'samsung-scripts' package.
+ Dummy package for migration to the new 'samsung-scripts' package.

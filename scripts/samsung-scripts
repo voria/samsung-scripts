@@ -6,11 +6,11 @@
 # Original Author: Stuart Herbert (stuart@stuartherbert.com)
 # Released into the public domain
 
-SCRIPTS_DIR="/usr/lib/nc10"
+SCRIPTS_DIR="/usr/lib/samsung-scripts"
 
 # Load configuration
-if [ -f /etc/default/nc10-scripts ]; then
-	. /etc/default/nc10-scripts
+if [ -f /etc/default/samsung-scripts ]; then
+	. /etc/default/samsung-scripts
 else
 	# Set default values
 	IGNORE_GOVERNORS="userspace conservative"
@@ -75,12 +75,12 @@ mustBeRoot ()
 
 listOptions ()
 {
-	echo "nc10 - Utilities for your Samsung NC10 netbook"
+	echo "samsung-scripts - Utilities for your Samsung netbook"
 	echo 
-	echo "nc10 status - show status for all devices"
+	echo "samsung-scripts status - show status for all devices"
 	# list all of the available scripts, and their help messages
 	for x in `echo $SCRIPTS_DIR/*.sh` ; do
-		echo -n "nc10 `basename $x .sh` "
+		echo -n "samsung-scripts `basename $x .sh` "
 		runScript `basename $x .sh` summary
 	done
 }

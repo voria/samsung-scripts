@@ -2,7 +2,7 @@
 # script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
 # refactored by Stuart Herbert (stuart@stuartherbert.com)
 #
-# "Toggle bluetooth on/off on Samsung NC10"
+# "Toggle bluetooth on/off on Samsung netbooks"
 
 case $LOCALE in
 	de*)

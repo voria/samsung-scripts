@@ -2,7 +2,7 @@
 # coding=UTF-8
 # script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
 #
-# helper for 'nc10' script, show/update notifications
+# helper for 'samsung-scripts' script, show/update notifications
 
 import sys, os, signal, time, pynotify
 

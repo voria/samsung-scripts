@@ -1,3 +1,10 @@
+samsung-scripts (6.0~ppa1~nc10~karmic) UNRELEASED; urgency=low
+
+  * Package 'nc10-scripts' renamed as 'samsung-scripts'.
+  * Main script ('nc10') renamed as 'samsung-scripts'.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 14 Jan 2010 16:11:33 +0100
+ 
 nc10-scripts (5.0~ppa9~nc10~karmic) karmic; urgency=low
 
   * Fix typo in 'nc10' script. 

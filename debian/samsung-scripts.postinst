@@ -1,0 +1,42 @@
+#!/bin/sh
+
+case "$1" in
+	configure)
+		# Remove old rule from sudoers file (installed by 'nc10-scripts' <= 5.0~ppa9~nc10~karmic)
+		sed "/NC10/d" /etc/sudoers > /etc/sudoers.new
+		rm -f /etc/sudoers
+		mv /etc/sudoers.new /etc/sudoers
+		# Remove old rule from sudoers file (installed by 'samsung-scripts' >= 6.0~ppa1~nc10~karmic)
+		sed "/SAMSUNG_SCRIPTS/d" /etc/sudoers > /etc/sudoers.new
+		rm -f /etc/sudoers
+		mv /etc/sudoers.new /etc/sudoers
+		# Make sure that permissions and owner/group for sudoers file are good
+		chown root:root /etc/sudoers
+		chmod 440 /etc/sudoers
+
+		# Add new rules in sudoers file
+		echo "## SAMSUNG_SCRIPTS: rule for samsung-scripts" >> /etc/sudoers
+		echo "Cmnd_Alias	SAMSUNG_SCRIPTS=/usr/bin/samsung-scripts" >> /etc/sudoers
+		echo "%admin ALL=(ALL) NOPASSWD: SAMSUNG_SCRIPTS" >> /etc/sudoers
+		echo "gdm ALL=(ALL) NOPASSWD: SAMSUNG_SCRIPTS" >> /etc/sudoers
+
+		# Add status control files
+		BLUETOOTH_STATUS="/usr/lib/samsung-scripts/status/bluetooth"
+		WEBCAM_STATUS="/usr/lib/samsung-scripts/status/webcam"
+		WIRELESS_STATUS="/usr/lib/samsung-scripts/status/wireless"
+		if [ ! -f $BLUETOOTH_STATUS ]; then
+			echo -n 1 > $BLUETOOTH_STATUS
+		fi
+		if [ ! -f $WEBCAM_STATUS ]; then
+			echo -n 1 > $WEBCAM_STATUS
+		fi
+		if [ ! -f $WIRELESS_STATUS ]; then
+			echo -n 1 > $WIRELESS_STATUS
+		fi			
+
+		# Update gconf default keybindings
+		if [ -x /usr/bin/update-gconf-defaults ]; then
+			update-gconf-defaults
+		fi
+		;;
+esac

@@ -2,8 +2,8 @@
 
 case ${1} in
 	resume|thaw)
-		if [ -f /etc/default/nc10-scripts ]; then
-			. /etc/default/nc10-scripts
+		if [ -f /etc/default/samsung-scripts ]; then
+			. /etc/default/samsung-scripts
 		else
 			# Do nothing
 			exit 0
@@ -22,19 +22,19 @@ case ${1} in
 		
 		# It's probably better to enable all devices, and
 		# then disable the ones that should be disabled.
-		nc10 bluetooth on
-		nc10 webcam on
-		nc10 wifi on
+		samsung-scripts bluetooth on
+		samsung-scripts webcam on
+		samsung-scripts wifi on
 		sleep 3 # Wait some time, just in case
 
 		if [ $BTS -eq 0 ]; then
-			nc10 bluetooth off
+			samsung-scripts bluetooth off
 		fi
 		if [ $WCS -eq 0 ]; then
-			nc10 webcam off
+			samsung-scripts webcam off
 		fi
 		if [ $WLS -eq 0 ]; then
-			nc10 wifi off
+			samsung-scripts wifi off
 		fi
 		;;
 esac

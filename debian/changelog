@@ -1,3 +1,9 @@
+samsung-scripts (6.0~ppa2~loms~karmic) karmic; urgency=low
+
+  * Change versioning system. 
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Thu, 21 Jan 2010 12:15:10 +0100
+
 samsung-scripts (6.0~ppa1~nc10~karmic) karmic; urgency=low
 
   * Package 'nc10-scripts' renamed as 'samsung-scripts'.

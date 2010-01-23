@@ -21,6 +21,7 @@ binary-indep: clean
 	dh_installdocs -psamsung-scripts
 	dh_installinit --no-start
 	dh_installdeb
+	ln -s /usr/bin/samsung-scripts debian/samsung-scripts/usr/bin/nc10
 	dh_fixperms
 	dh_gencontrol
 	dh_builddeb

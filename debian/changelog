@@ -1,3 +1,9 @@
+samsung-scripts (6.0~ppa3~loms~karmic) karmic; urgency=low
+
+  * Add '/usr/bin/nc10' as a symlink to '/usr/bin/samsung-scripts'. 
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 23 Jan 2010 15:47:28 +0100
+
 samsung-scripts (6.0~ppa2~loms~karmic) karmic; urgency=low
 
   * Change versioning system. 

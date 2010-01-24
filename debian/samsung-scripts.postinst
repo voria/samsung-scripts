@@ -34,6 +34,13 @@ case "$1" in
 			echo -n 1 > $WIRELESS_STATUS
 		fi			
 
+		# Remove all remaining files from old 'nc10-scripts' installation
+		rm -rf /usr/lib/nc10/
+		rm -rf /etc/default/nc10-scripts
+		rm -rf /etc/init/nc10-scripts.conf
+		rm -rf /etc/pm/sleep.d/20_nc10-scripts
+		rm -rf /etc/bash_completion.d/nc10
+
 		# Update gconf default keybindings
 		if [ -x /usr/bin/update-gconf-defaults ]; then
 			update-gconf-defaults

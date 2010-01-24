@@ -1,3 +1,11 @@
+samsung-scripts (6.0~ppa4~loms~karmic) karmic; urgency=low
+
+  * debian/postinst:
+    remove all the remaining files from the old 'nc10-scripts' installation.
+  * Fix comment in upstart script.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sun, 24 Jan 2010 17:32:44 +0100
+
 samsung-scripts (6.0~ppa3~loms~karmic) karmic; urgency=low
 
   * Add '/usr/bin/nc10' as a symlink to '/usr/bin/samsung-scripts'. 

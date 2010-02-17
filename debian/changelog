@@ -1,3 +1,10 @@
+samsung-scripts (7.0~ppa2~loms~karmic) karmic; urgency=low
+
+  * Check if compiz is running prior to switch screen layout,
+    in order to avoid to trigger bug LP:#419328.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 17 Feb 2010 23:49:28 +0100
+
 samsung-scripts (7.0~ppa1~loms~karmic) karmic; urgency=low
 
   * Add a new script, 'switchscreenlayout.sh', binded by default to Fn-F4.

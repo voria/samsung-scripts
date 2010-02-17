@@ -1,3 +1,11 @@
+samsung-scripts (7.0~ppa1~loms~karmic) karmic; urgency=low
+
+  * Add a new script, 'switchscreenlayout.sh', binded by default to Fn-F4.
+  * Add 'arandr' as dependency in debian/control.
+  * Update gconf and khotkeys configuration files.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 17 Feb 2010 21:23:36 +0100
+
 samsung-scripts (6.0~ppa4~loms~karmic) karmic; urgency=low
 
   * debian/postinst:

@@ -4,9 +4,11 @@
 /apps/metacity/keybinding_commands/command_4	sudo samsung-scripts bluetooth
 /apps/metacity/keybinding_commands/command_5	sudo samsung-scripts webcam
 /apps/metacity/keybinding_commands/command_6	wmswitcher.sh
+/apps/metacity/keybinding_commands/command_7	switchscreenlayout.sh
 /apps/metacity/global_keybindings/run_command_1	XF86Launch1
 /apps/metacity/global_keybindings/run_command_2 XF86Launch3
 /apps/metacity/global_keybindings/run_command_3	XF86WLAN
 /apps/metacity/global_keybindings/run_command_4 XF86Launch2
 /apps/metacity/global_keybindings/run_command_5 <Shift><Control><Alt>w
 /apps/metacity/global_keybindings/run_command_6 <Shift><Control><Alt>m
+/apps/metacity/global_keybindings/run_command_7	XF86Launch4

@@ -8,11 +8,13 @@ Homepage: http://www.voria.org/forum
 
 Package: samsung-scripts
 Replaces: nc10-scripts (<= 5.0~ppa9~nc10~karmic)
+Depends: arandr
 Architecture: all
 Description: Scripts for Samsung netbooks
  This package contains useful scripts for Samsung netbooks.
  .
  These are the default keybindings:
+ - FN-F4 --> Switch to the next screen layout.
  - FN-F5 --> Turn on/off the screen brightness.
  - FN-F7 --> Turn on/off the bluetooth.
  - FN-F8 --> Show CPU temperature and manage CPU governors.

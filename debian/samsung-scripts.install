@@ -2,6 +2,7 @@ bash_completion.d/samsung-scripts etc/bash_completion.d/
 sleep.d/20_samsung-scripts etc/pm/sleep.d/
 scripts/samsung-scripts usr/bin/
 scripts/wmswitcher.sh usr/bin/
+scripts/switchscreenlayout.sh usr/bin/
 scripts/bluetooth.sh usr/lib/samsung-scripts/
 scripts/cpuperf.sh usr/lib/samsung-scripts/
 scripts/lcd.sh usr/lib/samsung-scripts/

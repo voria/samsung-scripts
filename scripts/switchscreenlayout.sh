@@ -4,6 +4,11 @@
 # "switch screen's layouts created with arandr"
 #
 
+if ps x | grep compiz.real | grep -v grep > /dev/null; then
+	# Compiz is running. Do nothing in order to avoid to trigger bug LP:#419328.
+	exit 0
+fi 
+
 LAYOUTS_DIR="$HOME/.screenlayout"
 
 if [ ! -d $LAYOUTS_DIR ]; then

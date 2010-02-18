@@ -16,12 +16,6 @@ IGNORE_GOVERNORS="userspace conservative"
 WIRELESS_TOGGLE_METHOD=0
 WIRELESS_MODULE="ath5k"
 
-# These are the paths used to set devices autosuspend.
-# If you want to disable this feature, set them to empty strings.
-# Example: WEBCAM_AUTOSUSPEND_PATH=""
-WEBCAM_AUTOSUSPEND_PATH="/sys/bus/usb/devices/1-8/power/level" 
-BLUETOOTH_AUTOSUSPEND_PATH="/sys/bus/usb/devices/3-2/power/level"
-
 # Set this to 'false' if you don't want the last status for bluetooth,
 # webcam and wireless restored after a suspend/hibernate/reboot cycle.
 LAST_STATUS_RESTORE=true

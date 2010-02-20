@@ -8,7 +8,7 @@ Homepage: http://www.voria.org/forum
 
 Package: samsung-scripts
 Replaces: nc10-scripts (<= 5.0~ppa9~nc10~karmic)
-Depends: arandr
+Depends: arandr, libnotify-bin
 Architecture: all
 Description: Scripts for Samsung netbooks
  This package contains useful scripts for Samsung netbooks.

@@ -1,3 +1,15 @@
+samsung-scripts (7.0~ppa3~loms~karmic) karmic; urgency=low
+
+  *  Drop usb autosuspend feature for bluetooth and webcam,
+     as it's already managed by laptop-mode.
+  *  switchscreenlayout.sh:
+     show a popup message to inform the user about compiz state,
+     when it's enabled.
+  *  debian/control:
+     add 'libnotify-bin' as dependency.
+
+ -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 20 Feb 2010 14:46:04 +0100
+
 samsung-scripts (7.0~ppa2~loms~karmic) karmic; urgency=low
 
   * Check if compiz is running prior to switch screen layout,

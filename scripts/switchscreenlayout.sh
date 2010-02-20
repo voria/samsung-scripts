@@ -4,10 +4,24 @@
 # "switch screen's layouts created with arandr"
 #
 
+case $LANG in
+	it*)
+		POPUP_TITLE="Uscita VGA"
+		POPUP_BODY="Compiz è attivo. Per favore disabilitalo prima di attivare l'uscita VGA".
+		;;
+	*)
+		POPUP_TITLE="VGA Output"
+		POPUP_BODY="Compiz is enabled. Please disable it prior to enable the VGA output."
+		;;
+esac
+
 if ps x | grep compiz.real | grep -v grep > /dev/null; then
+	if which notify-send > /dev/null; then
+		notify-send -u critical -i info "$POPUP_TITLE" "$POPUP_BODY"
+	fi
 	# Compiz is running. Do nothing in order to avoid to trigger bug LP:#419328.
 	exit 0
-fi 
+fi
 
 LAYOUTS_DIR="$HOME/.screenlayout"
 

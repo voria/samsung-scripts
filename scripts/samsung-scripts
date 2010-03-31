@@ -111,9 +111,9 @@ showHelp ()
 # $4 - message
 showPopup ()
 {
-	if [ $SUDO_USER != "" ]; then
-		if [ $USE_POPUP = 1 ]; then
-			if [ $DISTRO = 0 ]; then # Ubuntu: use notify-osd
+	if [[ $SUDO_USER != "" ]]; then
+		if [[ $USE_POPUP = 1 ]]; then
+			if [[ $DISTRO = 0 ]]; then # Ubuntu: use notify-osd
 				# Create temp files holding informations we need for the notification bubble, owned by $SUDO_USER.
 				echo "$1" > $NH_ICON; echo "$2" > $NH_URGENCY; echo "$3" > $NH_TITLE; echo "$4" > $NH_MESSAGE
 				chown $SUDO_USER $NH_ICON $NH_URGENCY $NH_TITLE $NH_MESSAGE

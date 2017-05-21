@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # wrapper script for voria's excellent NC10 scripts
-# see http://www.voria.org/forum/ for details
+# see http://loms.voria.org for details
 #
 # Original Author: Stuart Herbert (stuart@stuartherbert.com)
 # Released into the public domain
@@ -15,7 +15,7 @@ else
 	# Set default values
 	IGNORE_GOVERNORS="userspace conservative"
 	WIRELESS_TOGGLE_METHOD=0
-	WIRELESS_MODULE="ath5k" 
+	WIRELESS_MODULE="ath5k"
 	LAST_STATUS_RESTORE=false
 	BLUETOOTH_STATUS=""
 	WEBCAM_STATUS=""
@@ -74,7 +74,7 @@ mustBeRoot ()
 listOptions ()
 {
 	echo "samsung-scripts - Utilities for your Samsung netbook"
-	echo 
+	echo
 	echo "samsung-scripts status - show status for all devices"
 	# list all of the available scripts, and their help messages
 	for x in `echo $SCRIPTS_DIR/*.sh` ; do
@@ -156,7 +156,7 @@ main ()
 	scriptToRun="$1"
 	if [ $scriptToRun = "status" ]; then
 		for x in `echo $SCRIPTS_DIR/*.sh` ; do
-				runScript `basename $x .sh` status
+			runScript `basename $x .sh` status
 		done
 	else
 		shift

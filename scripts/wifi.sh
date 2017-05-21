@@ -1,5 +1,5 @@
 #!/bin/sh
-# script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
+# script by Fortunato Ventre - http://www.voria.org - vorione@gmail.com
 # refactored by Stuart Herbert (stuart@stuartherbert.com)
 #
 # "Toggle wireless on/off on Samsung netbooks"
@@ -39,7 +39,7 @@ case $LOCALE in
 esac
 
 ICON_CONNECTED=notification-network-wireless-none
-ICON_DISCONNECTED=notification-network-wireless-disconnected 
+ICON_DISCONNECTED=notification-network-wireless-disconnected
 
 disableWifi ()
 {

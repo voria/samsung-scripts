@@ -8,18 +8,18 @@ case ${1} in
 			# Do nothing
 			exit 0
 		fi
-		
+
 		if [ $LAST_STATUS_RESTORE = "false" ]; then
 			# We don't want to restore last status
 			exit 0
 		fi
-		
+
 		## Restore status of devices
 		# Get last status
 		BTS=`cat $BLUETOOTH_STATUS`
 		WCS=`cat $WEBCAM_STATUS`
 		WLS=`cat $WIRELESS_STATUS`
-		
+
 		# It's probably better to enable all devices, and
 		# then disable the ones that should be disabled.
 		samsung-scripts bluetooth on

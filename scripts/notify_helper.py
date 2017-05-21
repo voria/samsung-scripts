@@ -1,45 +1,50 @@
 #!/usr/bin/env python
 # coding=UTF-8
-# script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
+# script by Fortunato Ventre - http://www.voria.org - vorione@gmail.com
 #
 # helper for 'samsung-scripts' script, show/update notifications
 
-import sys, os, signal, time, pynotify
+import sys
+import os
+import signal
+import time
+import pynotify
 
 if not pynotify.init("notify_helper"):
     sys.exit(1)
 
-## Check if we have all the parameters we need
+# Check if we have all the parameters we need
 # sys.argv[1] = pid
 # sys.argv[2] = icon
 # sys.argv[3] = urgency
 # sys.argv[4] = title
 # sys.argv[5] = message
 if len(sys.argv) != 6:
-	sys.exit(2)
+    sys.exit(2)
 
 # Save current pid
 open(sys.argv[1], "w").write(str(os.getpid()))
 
-def notifyUpdate(signum = None, frame = None):
-	# Read needed info from temp files
-	icon = open(sys.argv[2], "r").read().strip()
-	os.remove(sys.argv[2])
-	urgency = open(sys.argv[3], "r").read().strip()
-	os.remove(sys.argv[3])
-	title = open(sys.argv[4], "r").read().strip()
-	os.remove(sys.argv[4])
-	message = open(sys.argv[5], "r").read().strip()
-	os.remove(sys.argv[5])
-	notify.update(title, message, icon)
-	if urgency == "low":
-		notify.set_urgency(pynotify.URGENCY_LOW)
-	elif urgency == "normal":
-		notify.set_urgency(pynotify.URGENCY_NORMAL)
-	else:
-		notify.set_urgency(pynotify.URGENCY_CRITICAL)
-	notify.show()
-	time.sleep(5) # sleep while showing notification
+
+def notifyUpdate(signum=None, frame=None):
+    # Read needed info from temp files
+    icon = open(sys.argv[2], "r").read().strip()
+    os.remove(sys.argv[2])
+    urgency = open(sys.argv[3], "r").read().strip()
+    os.remove(sys.argv[3])
+    title = open(sys.argv[4], "r").read().strip()
+    os.remove(sys.argv[4])
+    message = open(sys.argv[5], "r").read().strip()
+    os.remove(sys.argv[5])
+    notify.update(title, message, icon)
+    if urgency == "low":
+        notify.set_urgency(pynotify.URGENCY_LOW)
+    elif urgency == "normal":
+        notify.set_urgency(pynotify.URGENCY_NORMAL)
+    else:
+        notify.set_urgency(pynotify.URGENCY_CRITICAL)
+    notify.show()
+    time.sleep(5)  # sleep while showing notification
 
 # create a new notification
 notify = pynotify.Notification(" ")
@@ -49,4 +54,4 @@ signal.signal(12, notifyUpdate)
 notifyUpdate()
 # remove pid file at exit
 if os.path.exists(sys.argv[1]):
-	os.remove(sys.argv[1])
+    os.remove(sys.argv[1])

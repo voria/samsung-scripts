@@ -2,8 +2,8 @@
 #
 # Restore the last status for Bluetooth, Webcam and Wireless on Samsung netbooks
 
-description	"Scripts for Samsung netbooks"
-author		"Fortunato Ventre <vorione@gmail.com>"
+description "Scripts for Samsung netbooks"
+author "Fortunato Ventre <vorione@gmail.com>"
 
 start on (started gdm or started kdm)
 

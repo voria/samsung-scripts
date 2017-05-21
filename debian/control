@@ -1,10 +1,10 @@
 Source: samsung-scripts
 Section: misc
 Priority: extra
-Maintainer: Fortunato Ventre (voRia) <vorione@gmail.com>
+Maintainer: Fortunato Ventre <vorione@gmail.com>
 Build-Depends: debhelper (>= 7)
 Standards-Version: 3.8.0
-Homepage: http://www.voria.org/forum
+Homepage: http://loms.voria.org
 
 Package: samsung-scripts
 Replaces: nc10-scripts (<= 5.0~ppa9~nc10~karmic)

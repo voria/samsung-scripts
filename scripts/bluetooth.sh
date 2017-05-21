@@ -1,5 +1,5 @@
 #!/bin/sh
-# script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
+# script by Fortunato Ventre - http://www.voria.org - vorione@gmail.com
 # refactored by Stuart Herbert (stuart@stuartherbert.com)
 #
 # "Toggle bluetooth on/off on Samsung netbooks"

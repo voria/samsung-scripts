@@ -1,5 +1,5 @@
 #!/bin/sh
-# script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
+# script by Fortunato Ventre - http://www.voria.org - vorione@gmail.com
 # refactoring by Stuart Herbert (stuart@stuartherbert.com)
 #
 # "enable/disable screen backlight on Samsung netbooks"

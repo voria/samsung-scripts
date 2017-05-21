@@ -32,7 +32,7 @@ case "$1" in
 		fi
 		if [ ! -f $WIRELESS_STATUS ]; then
 			echo -n 1 > $WIRELESS_STATUS
-		fi			
+		fi
 
 		# Remove all remaining files from old 'nc10-scripts' installation
 		rm -rf /usr/lib/nc10/

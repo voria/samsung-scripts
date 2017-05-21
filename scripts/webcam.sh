@@ -1,5 +1,5 @@
 #!/bin/sh
-# script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
+# script by Fortunato Ventre - http://www.voria.org - vorione@gmail.com
 # refactored by Stuart Herbert (stuart@stuartherbert.com)
 #
 # "Toggle webcam on/off on Samsung netbooks"
@@ -19,7 +19,7 @@ Die Webcam kann im Moment nicht ausgeschaltet werden."
 		WC_OFF="Webcam désactivée"
 		WC_INUSE="Webcam en cours d'utilisation.
 Le périphérique ne peut être désactivé pour le moment."
-        ;;
+		;;
 	it*)
 		POPUP_TITLE="Webcam"
 		WC_ON="Webcam attivata"

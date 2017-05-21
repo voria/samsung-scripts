@@ -1,8 +1,8 @@
 samsung-scripts (7.0~ppa4~loms~karmic) karmic; urgency=low
 
-  * Fix warnings in showPopup(). 
+  * Fix warnings in showPopup().
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 31 Mar 2010 10:18:46 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 31 Mar 2010 10:18:46 +0200
 
 samsung-scripts (7.0~ppa3~loms~karmic) karmic; urgency=low
 
@@ -14,14 +14,14 @@ samsung-scripts (7.0~ppa3~loms~karmic) karmic; urgency=low
   *  debian/control:
      add 'libnotify-bin' as dependency.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 20 Feb 2010 14:46:04 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 20 Feb 2010 14:46:04 +0100
 
 samsung-scripts (7.0~ppa2~loms~karmic) karmic; urgency=low
 
   * Check if compiz is running prior to switch screen layout,
     in order to avoid to trigger bug LP:#419328.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 17 Feb 2010 23:49:28 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 17 Feb 2010 23:49:28 +0100
 
 samsung-scripts (7.0~ppa1~loms~karmic) karmic; urgency=low
 
@@ -29,7 +29,7 @@ samsung-scripts (7.0~ppa1~loms~karmic) karmic; urgency=low
   * Add 'arandr' as dependency in debian/control.
   * Update gconf and khotkeys configuration files.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 17 Feb 2010 21:23:36 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 17 Feb 2010 21:23:36 +0100
 
 samsung-scripts (6.0~ppa4~loms~karmic) karmic; urgency=low
 
@@ -37,93 +37,93 @@ samsung-scripts (6.0~ppa4~loms~karmic) karmic; urgency=low
     remove all the remaining files from the old 'nc10-scripts' installation.
   * Fix comment in upstart script.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sun, 24 Jan 2010 17:32:44 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Sun, 24 Jan 2010 17:32:44 +0100
 
 samsung-scripts (6.0~ppa3~loms~karmic) karmic; urgency=low
 
-  * Add '/usr/bin/nc10' as a symlink to '/usr/bin/samsung-scripts'. 
+  * Add '/usr/bin/nc10' as a symlink to '/usr/bin/samsung-scripts'.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 23 Jan 2010 15:47:28 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 23 Jan 2010 15:47:28 +0100
 
 samsung-scripts (6.0~ppa2~loms~karmic) karmic; urgency=low
 
-  * Change versioning system. 
+  * Change versioning system.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Thu, 21 Jan 2010 12:15:10 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Thu, 21 Jan 2010 12:15:10 +0100
 
 samsung-scripts (6.0~ppa1~nc10~karmic) karmic; urgency=low
 
   * Package 'nc10-scripts' renamed as 'samsung-scripts'.
   * Main script ('nc10') renamed as 'samsung-scripts'.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 14 Jan 2010 16:11:33 +0100
- 
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 14 Jan 2010 16:11:33 +0100
+
 nc10-scripts (5.0~ppa9~nc10~karmic) karmic; urgency=low
 
-  * Fix typo in 'nc10' script. 
+  * Fix typo in 'nc10' script.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 13 Jan 2010 19:11:33 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 13 Jan 2010 19:11:33 +0100
 
 nc10-scripts (5.0~ppa8~nc10~karmic) karmic; urgency=low
 
   * Do not use popups if $SUDO_USER is not specified.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 13 Jan 2010 18:43:02 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 13 Jan 2010 18:43:02 +0100
 
 nc10-scripts (5.0~ppa7~nc10~karmic) karmic; urgency=low
 
   * Remove temp files when they are not needed anymore in 'notify_helper.py'.
   * Use per-user temp files in order to avoid permissions conflicts.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 13 Jan 2010 16:09:52 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 13 Jan 2010 16:09:52 +0100
 
 nc10-scripts (5.0~ppa6~nc10~karmic) karmic; urgency=low
 
   * Change default map for bluetooth toggling to FN-F7.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 13 Jan 2010 13:16:59 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 13 Jan 2010 13:16:59 +0000
 
 nc10-scripts (5.0~ppa5~nc10~karmic) karmic; urgency=low
 
   * Disable/enable bluetooth service when disabling/enabling
     bluetooth.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 12 Jan 2010 15:27:16 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Tue, 12 Jan 2010 15:27:16 +0000
 
 nc10-scripts (5.0~ppa4~nc10~karmic) karmic; urgency=low
 
   * Add back the 'wmswitcher.sh' script to toggle compiz on/off,
     mapped to <Shift><Ctrl><Alt>m.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 05 Jan 2010 10:04:52 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Tue, 05 Jan 2010 10:04:52 +0100
 
 nc10-scripts (5.0~ppa3~nc10~karmic) karmic; urgency=low
 
-  * Sleep for 3 seconds when restoring devices status. 
+  * Sleep for 3 seconds when restoring devices status.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 19 Dec 2009 16:10:36 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 19 Dec 2009 16:10:36 +0100
 
 nc10-scripts (5.0~ppa2~nc10~karmic) karmic; urgency=low
 
   * Add 'de' locale to 'scripts/cpuperf.sh'.
     Thanks to Python for providing it.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 12 Dec 2009 20:17:40 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 12 Dec 2009 20:17:40 +0000
 
 nc10-scripts (5.0~ppa1~nc10~karmic) karmic; urgency=low
 
   * Migrate to debhelper build system.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 30 Nov 2009 11:41:26 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Mon, 30 Nov 2009 11:41:26 +0000
 
 nc10-scripts (4.0~ppa6~nc10~karmic) karmic; urgency=low
 
   * Add back the module removal method for toggling wireless,
     along with the new iwconfig method.
   * Add a new option in '/etc/default/nc10-scripts' to select
-    which method to use. 
+    which method to use.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sun, 29 Nov 2009 15:33:06 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Sun, 29 Nov 2009 15:33:06 +0000
 
 nc10-scripts (4.0~ppa5~nc10~karmic) karmic; urgency=low
 
@@ -133,7 +133,7 @@ nc10-scripts (4.0~ppa5~nc10~karmic) karmic; urgency=low
     so there is no need for options in /etc/default/nc10-scripts.
   * Add bash-completion support for all the scripts.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 25 Nov 2009 15:53:45 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 25 Nov 2009 15:53:45 +0000
 
 nc10-scripts (4.0~ppa4~nc10~karmic) karmic; urgency=low
 
@@ -144,21 +144,21 @@ nc10-scripts (4.0~ppa4~nc10~karmic) karmic; urgency=low
   * Set default values for all options in /usr/lib/nc10 if configuration
     file cannot be found.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 23 Nov 2009 11:13:30 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Mon, 23 Nov 2009 11:13:30 +0000
 
 nc10-scripts (4.0~ppa3~nc10~karmic) karmic; urgency=low
 
   * Keep devices status between package updates.
-  * Add a new command, 'nc10 status', to show all devices status. 
+  * Add a new command, 'nc10 status', to show all devices status.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 17 Nov 2009 12:53:00 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Tue, 17 Nov 2009 12:53:00 +0000
 
 nc10-scripts (4.0~ppa2~nc10~karmic) karmic; urgency=low
 
   * When restoring devices status, it's probably better to enable all
-    devices, and then disable the ones that have to. 
+    devices, and then disable the ones that have to.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Thu, 12 Nov 2009 17:19:08 +0100
+ -- Fortunato Ventre <vorione@gmail.com>  Thu, 12 Nov 2009 17:19:08 +0100
 
 nc10-scripts (4.0~ppa1~nc10~karmic) karmic; urgency=low
 
@@ -167,59 +167,59 @@ nc10-scripts (4.0~ppa1~nc10~karmic) karmic; urgency=low
     a suspend/hibernate/reboot cycle by default.
   * When bluetooth is disabled, kill the radio and remove the kernel module.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 11 Nov 2009 19:01:59 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 11 Nov 2009 19:01:59 +0000
 
 nc10-scripts (3.0~ppa2~nc10~karmic) karmic; urgency=low
 
-  * Fix 'update-gconf-defaults' in debian/postinst,debian/postrm. 
+  * Fix 'update-gconf-defaults' in debian/postinst,debian/postrm.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 11 Nov 2009 16:30:05 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 11 Nov 2009 16:30:05 +0000
 
 nc10-scripts (3.0~ppa1~nc10~karmic) karmic; urgency=low
 
   * Add support for Kubuntu.
-    Kdialog is used for information popups. 
+    Kdialog is used for information popups.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 20 Oct 2009 17:52:48 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Tue, 20 Oct 2009 17:52:48 +0200
 
 nc10-scripts (2.0~ppa3~nc10~karmic) karmic; urgency=low
 
   * debian/postinst, debian/postrm:
-    - check if 'update-gconf-defaults' exists prior to use it.  
+    - check if 'update-gconf-defaults' exists prior to use it.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 19 Oct 2009 16:55:13 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Mon, 19 Oct 2009 16:55:13 +0200
 
 nc10-scripts (2.0~ppa2~nc10~karmic) karmic; urgency=low
 
-  * Fix bluetooth toggle. 
+  * Fix bluetooth toggle.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Thu, 17 Sep 2009 17:07:46 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Thu, 17 Sep 2009 17:07:46 +0200
 
 nc10-scripts (2.0~ppa1~nc10~karmic) karmic; urgency=low
 
   * First release for Karmic.
   * Drop xbacklight, as it does not work anymore.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 09 Sep 2009 12:52:23 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 09 Sep 2009 12:52:23 +0000
 
 nc10-scripts (1.0~ppa4~nc10~jaunty) jaunty; urgency=low
 
-  * Correctly use newlines in cpuperf output. 
-  * debian/rules: remove .bzr/ directory when cleaning. 
+  * Correctly use newlines in cpuperf output.
+  * debian/rules: remove .bzr/ directory when cleaning.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 13 Jul 2009 00:17:48 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Mon, 13 Jul 2009 00:17:48 +0200
 
 nc10-scripts (1.0~ppa3~nc10~jaunty) jaunty; urgency=low
 
-  * nc10: sleep for 5 seconds after notification update. 
+  * nc10: sleep for 5 seconds after notification update.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 27 Jun 2009 00:31:30 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 27 Jun 2009 00:31:30 +0200
 
 nc10-scripts (1.0~ppa2~nc10~jaunty) jaunty; urgency=low
 
-  * Fix minor issues with notification system. 
+  * Fix minor issues with notification system.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Fri, 26 Jun 2009 04:36:35 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Fri, 26 Jun 2009 04:36:35 +0200
 
 nc10-scripts (1.0~ppa1~nc10~jaunty) jaunty; urgency=low
 
@@ -232,22 +232,22 @@ nc10-scripts (1.0~ppa1~nc10~jaunty) jaunty; urgency=low
   * debian/control: drop 'libnotify-bin' dependency. No more needed.
   * Install 'changelog' and 'copyright' files in /usr/share/doc/nc10-scripts/.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Thu, 25 Jun 2009 16:59:26 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Thu, 25 Jun 2009 16:59:26 +0200
 
 nc10-scripts (0.5~ppa2~nc10~jaunty) jaunty; urgency=low
 
   * 'btonoff.sh' now loads/unloads 'btusb' module too.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 15 Jun 2009 02:25:25 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Mon, 15 Jun 2009 02:25:25 +0200
 
 nc10-scripts (0.5~ppa1~nc10~jaunty) jaunty; urgency=low
 
   * New 'wmswitcher.sh', with  more robust way to check
     the window manager in use.
   * Modified the urgency level for all the notifications to critical,
-    in all the scripts. 
+    in all the scripts.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 08 Jun 2009 21:05:10 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Mon, 08 Jun 2009 21:05:10 +0200
 
 nc10-scripts (0.4~ppa10~nc10~jaunty) jaunty; urgency=low
 
@@ -255,7 +255,7 @@ nc10-scripts (0.4~ppa10~nc10~jaunty) jaunty; urgency=low
     All the gpm stuff is not needed anymore to prevent unwanted screen resumes
     when the 'xset dpms force on/off' options are used.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 06 Jun 2009 16:09:09 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 06 Jun 2009 16:09:09 +0200
 
 nc10-scripts (0.4~ppa9~nc10~jaunty) jaunty; urgency=low
 
@@ -266,26 +266,26 @@ nc10-scripts (0.4~ppa9~nc10~jaunty) jaunty; urgency=low
     This way bubbles are always showed, even when the screensaver is
     inhibited.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 23 May 2009 00:11:44 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 23 May 2009 00:11:44 +0000
 
 nc10-scripts (0.4~ppa8~nc10~jaunty) jaunty; urgency=low
 
   * 'lcdonoff.sh' slighty modified in order to work when
     'xset dpms' option is used.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Fri, 22 May 2009 16:13:56 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Fri, 22 May 2009 16:13:56 +0000
 
 nc10-scripts (0.4~ppa7~nc10~jaunty) jaunty; urgency=low
 
-  * Added Turkish translation for governors in 'cpumanager_helper.py'. 
+  * Added Turkish translation for governors in 'cpumanager_helper.py'.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 13 May 2009 19:36:37 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 13 May 2009 19:36:37 +0200
 
 nc10-scripts (0.4~ppa6~nc10~jaunty) jaunty; urgency=low
 
-  * Added support to all the governors to 'cpumanager*' scripts. 
+  * Added support to all the governors to 'cpumanager*' scripts.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 12 May 2009 16:25:40 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Tue, 12 May 2009 16:25:40 +0000
 
 nc10-scripts (0.4~ppa5~nc10~jaunty) jaunty; urgency=low
 
@@ -303,27 +303,27 @@ nc10-scripts (0.4~ppa5~nc10~jaunty) jaunty; urgency=low
         governor_performance
       They default to 'None' (the original name of the governor is used).
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 12 May 2009 10:45:37 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Tue, 12 May 2009 10:45:37 +0200
 
 nc10-scripts (0.4~ppa4~nc10~jaunty) jaunty; urgency=low
 
   * Added French translations to all the scripts. (thanks to seb0)
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 11 May 2009 21:06:08 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Mon, 11 May 2009 21:06:08 +0200
 
 nc10-scripts (0.4~ppa3~nc10~jaunty) jaunty; urgency=low
 
   * Added CPU frequency info to 'cpumanager_helper.py'.
   * Added 'pl_PL' translation to 'cpumanager_helper.py'. (thanks to Cezary)
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Mon, 11 May 2009 17:08:14 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Mon, 11 May 2009 17:08:14 +0000
 
 nc10-scripts (0.4~ppa2~nc10~jaunty) jaunty; urgency=low
 
   * Removed 'cputemp.sh'.
-  * Renamed 'cpuscaling.sh' to 'cpumanager.sh'. Now it shows cpu temp too. 
+  * Renamed 'cpuscaling.sh' to 'cpumanager.sh'. Now it shows cpu temp too.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sun, 10 May 2009 17:25:31 +0000
+ -- Fortunato Ventre <vorione@gmail.com>  Sun, 10 May 2009 17:25:31 +0000
 
 nc10-scripts (0.4~ppa1~nc10~jaunty) jaunty; urgency=low
 
@@ -333,49 +333,49 @@ nc10-scripts (0.4~ppa1~nc10~jaunty) jaunty; urgency=low
   * Changed default keybindings for 'cputemp.sh' and 'cpuscaling.sh'
     respectively to FN-F7 and FN-F8.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sun, 10 May 2009 14:43:23 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Sun, 10 May 2009 14:43:23 +0200
 
 nc10-scripts (0.3~ppa11~nc10~jaunty) jaunty; urgency=low
 
   * Changed 'cpuscaling.sh' Turkish translation to be more understandable.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 06 May 2009 15:44:02 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 06 May 2009 15:44:02 +0200
 
 nc10-scripts (0.3~ppa10~nc10~jaunty) jaunty; urgency=low
 
-  * Added Turkish translation to all the scripts. (thanks to mbt28) 
+  * Added Turkish translation to all the scripts. (thanks to mbt28)
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Wed, 06 May 2009 13:20:40 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Wed, 06 May 2009 13:20:40 +0200
 
 nc10-scripts (0.3~ppa9~nc10~jaunty) jaunty; urgency=low
 
-  * Added German translation to the scripts. (thanks to mzaworsk) 
+  * Added German translation to the scripts. (thanks to mzaworsk)
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 05 May 2009 23:17:04 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Tue, 05 May 2009 23:17:04 +0200
 
 nc10-scripts (0.3~ppa8~nc10~jaunty) jaunty; urgency=low
 
-  * Added Turkish translation to 'wlonoff.sh' script. (thanks to mbt28) 
+  * Added Turkish translation to 'wlonoff.sh' script. (thanks to mbt28)
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sun, 03 May 2009 18:20:34 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Sun, 03 May 2009 18:20:34 +0200
 
 nc10-scripts (0.3~ppa7~nc10~jaunty) jaunty; urgency=low
 
-  * Changed package architecture to 'all'. 
+  * Changed package architecture to 'all'.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Fri, 01 May 2009 23:13:06 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Fri, 01 May 2009 23:13:06 +0200
 
 nc10-scripts (0.3~ppa6~nc10~jaunty) jaunty; urgency=low
 
   * Re-added 'cpuscaling.sh' script for changing CPU governors.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Fri, 01 May 2009 19:19:45 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Fri, 01 May 2009 19:19:45 +0200
 
 nc10-scripts (0.3~ppa5~nc10~jaunty) jaunty; urgency=low
 
-  * Scripts now use stock icons. 
+  * Scripts now use stock icons.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Thu, 30 Apr 2009 12:44:09 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Thu, 30 Apr 2009 12:44:09 +0200
 
 nc10-scripts (0.3~ppa4~nc10~jaunty) jaunty; urgency=low
 
@@ -384,7 +384,7 @@ nc10-scripts (0.3~ppa4~nc10~jaunty) jaunty; urgency=low
   * Added more checks in 'lcdonoff.sh' when saving gpm settings to avoid to
     mess up settings.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sun, 26 Apr 2009 17:13:03 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Sun, 26 Apr 2009 17:13:03 +0200
 
 nc10-scripts (0.3~ppa3~nc10~jaunty) jaunty; urgency=low
 
@@ -395,7 +395,7 @@ nc10-scripts (0.3~ppa3~nc10~jaunty) jaunty; urgency=low
   * 'lcdonoff.sh' script now disables/enables the gnome-power-manager 'idle_dim'
     options when needed in order to avoid unwanted screen resume.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 25 Apr 2009 20:39:15 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 25 Apr 2009 20:39:15 +0200
 
 nc10-scripts (0.3~ppa2~nc10~jaunty) jaunty; urgency=low
 
@@ -403,54 +403,53 @@ nc10-scripts (0.3~ppa2~nc10~jaunty) jaunty; urgency=low
     is used instead.
   * Dropped xbacklight dependency.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 25 Apr 2009 19:03:01 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 25 Apr 2009 19:03:01 +0200
 
 nc10-scripts (0.3~ppa1~nc10~jaunty) jaunty; urgency=low
 
   * In scripts that need admin rights, 'notify-send' commands now run as the user
     who invoked sudo. This way the user notify-osd daemon is used.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 25 Apr 2009 15:09:11 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 25 Apr 2009 15:09:11 +0200
 
 nc10-scripts (0.2~ppa7~nc10~jaunty) jaunty; urgency=low
 
-  * Updated 'btonoff.sh' script. 
+  * Updated 'btonoff.sh' script.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Fri, 24 Apr 2009 11:58:08 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Fri, 24 Apr 2009 11:58:08 +0200
 
 nc10-scripts (0.2~ppa6~nc10~jaunty) jaunty; urgency=low
 
-  * Fixed debian/rules. 
+  * Fixed debian/rules.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Fri, 24 Apr 2009 01:55:02 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Fri, 24 Apr 2009 01:55:02 +0200
 
 nc10-scripts (0.2~ppa5~nc10~jaunty) jaunty; urgency=low
 
-  * Added LPIA architecture. 
+  * Added LPIA architecture.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Thu, 23 Apr 2009 21:11:51 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Thu, 23 Apr 2009 21:11:51 +0200
 
 nc10-scripts (0.2~ppa4~nc10~jaunty) jaunty; urgency=low
 
-  * Added the 'wmswitcher.sh' script, mapped to <Shift><Control><Alt>m. 
+  * Added the 'wmswitcher.sh' script, mapped to <Shift><Control><Alt>m.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sun, 12 Apr 2009 00:11:53 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Sun, 12 Apr 2009 00:11:53 +0200
 
 nc10-scripts (0.2~ppa3~nc10~jaunty) jaunty; urgency=low
 
-  * Modified default options for xbacklight commands in 'lcdonoff.sh' script. 
+  * Modified default options for xbacklight commands in 'lcdonoff.sh' script.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Tue, 07 Apr 2009 17:05:18 +0200
+ -- Fortunato Ventre <vorione@gmail.com>  Tue, 07 Apr 2009 17:05:18 +0200
 
 nc10-scripts (0.2~ppa2~nc10~jaunty) jaunty; urgency=low
 
-  * Added 'btonoff.sh', 'wconoff.sh' and 'cputemp.sh' scripts. 
-  
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Sat, 04 Apr 2009 12:35:02 +0200
+  * Added 'btonoff.sh', 'wconoff.sh' and 'cputemp.sh' scripts.
+
+ -- Fortunato Ventre <vorione@gmail.com>  Sat, 04 Apr 2009 12:35:02 +0200
 
 nc10-scripts (0.2~ppa1~nc10~jaunty) jaunty; urgency=low
 
-  * Initial release for Jaunty. 
+  * Initial release for Jaunty.
 
- -- Fortunato Ventre (voRia) <vorione@gmail.com>  Fri, 03 Apr 2009 15:38:44 +0200
-
+ -- Fortunato Ventre <vorione@gmail.com>  Fri, 03 Apr 2009 15:38:44 +0200

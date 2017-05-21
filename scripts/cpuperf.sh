@@ -1,5 +1,5 @@
 #!/bin/sh
-# script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
+# script by Fortunato Ventre - http://www.voria.org - vorione@gmail.com
 # refactoring by Stuart Herbert (stuart@stuartherbert.com)
 #
 # "Manage CPU governors and show CPU info on Samsung netbooks"
@@ -192,7 +192,7 @@ main ()
 				nextGovernor
 			fi
 			showStatus
-			if [ $DISTRO = 1 ]; then # Kubuntu: we need to sleep some time for handling governor switch. 
+			if [ $DISTRO = 1 ]; then # Kubuntu: we need to sleep some time for handling governor switch.
 				sleep 2
 			fi
 			;;

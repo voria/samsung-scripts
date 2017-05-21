@@ -1,5 +1,5 @@
 #!/bin/bash
-# script by Fortunato Ventre (voRia) - http://www.voria.org - vorione@gmail.com
+# script by Fortunato Ventre - http://www.voria.org - vorione@gmail.com
 #
 # "switch screen's layouts created with arandr"
 #
